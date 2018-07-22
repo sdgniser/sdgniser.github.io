@@ -1,0 +1,475 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Lato', sans-serif;
+	font-size: 10px;
+}
+
+:root {
+	/* Colors */
+	--primary-0: #61acb5;
+	--primary-1: #3495a0;
+	--primary-2: #087e8b;
+	--secondary-0: #f04c6e;
+	--secondary-1: #ed254e;
+	--secondary-2: #c21f40;
+	--surface: #fcfcfc;
+	--text-light-0: #f5f5f5;
+	--text-light-1: #dfdfdf;
+	--text-dark-0: #241623;
+	--text-dark-1: #5f555f;
+}
+
+body {
+	background: var(--primary-1); 
+	background-image: url('../images/circuit-board.svg');
+	color: var(--text-dark-0);
+	margin: 0 auto;
+}
+
+.flex {
+	display: flex;
+}
+
+header {
+	margin: 0;
+	padding-top: 2rem;
+	animation: slideup 0.75s ease;
+}
+
+header > a {
+	width: 100%;
+	display: block;
+}
+
+header img {
+	max-width: 70%;
+	width: auto; 
+	height: auto; 
+	display: block;
+	margin: 0 auto;
+}
+
+#notFooter {
+	display: flex;
+}
+
+#navBar {
+	background: var(--primary-2);
+	box-shadow: 0 0 0.4rem black;
+	color: var(--text-light-0);
+	flex: 4;
+	position: relative;
+}
+
+#innerNavBar {
+	position: sticky;
+	top: 0;
+}
+
+#navbar hr {
+	height: 1px;
+	margin: 0 auto;
+	width: 90%;
+}
+
+nav li {
+	font-family: 'rokkitt', serif;
+	font-size: 2rem;
+	font-weight: bold;
+	line-height: 2;
+	list-style: none;
+
+	vertical-align: middle;
+	align-items: center;
+}
+
+nav ul {
+	padding: 0;
+	animation: fadein 1s ease;
+}
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+nav a {
+	display: block;
+	outline: none;
+	text-decoration: none;
+	padding: 1rem 2rem;
+
+	transition: all 0.25s ease-in;
+}
+
+nav a:link,
+nav a:visited,
+nav a.off {
+	color: var(--primary-0);
+}
+
+nav a:hover,
+nav a:active {
+	color: var(--text-light-0);
+}
+
+nav .on {
+	color: var(--text-light-0);
+}
+
+#mainContent {
+	flex: 16;
+}
+
+main {
+	flex: 11;
+	margin: 0 2rem;
+}
+
+section {
+	background: var(--surface);
+	box-shadow: 0 0 0.4rem black;
+	margin-bottom: 2rem;
+	padding: 2rem;
+
+	animation: slideup 0.5s ease;
+}
+
+section p {
+	color: var(--text-dark-0);
+	font-size: 1.6rem;
+	line-height: 1.6;
+}
+
+.members {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0,1fr));
+	grid-gap: 2rem;
+}
+
+.members h4 {
+	text-align: center;
+	margin: 0.2rem 0;
+}
+
+.members p {
+	color: var(--text-dark-1);
+	line-height: 1.4;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.kenobi {
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.member-image {
+	position: relative;
+}
+
+.member-image > img {
+	border-radius: 50%;
+	transition: 0.25s ease;
+}
+
+.member-image:hover > img {
+	filter: hue-rotate(180deg) blur(1px);
+}
+
+.member-image:hover ul {
+	opacity: 1;
+}
+
+.member-social {
+	width: 100%;
+}
+
+.member-social ul {
+	display: flex;
+	margin: 0 auto;
+	opacity: 0;
+	padding: 0;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	transition: 0.5s ease;
+
+	width: 90%;
+}
+
+.member-social li {
+	flex: 1;
+	display: inline-block;
+	padding: 0 3%;
+}
+
+.member-social a,
+.member-social a:link,
+.member-social a:visited {
+	opacity: 0.6;
+	transition: 0.25s ease;
+}
+
+.member-social a:focus,
+.member-social a:hover,
+.member-social a:active {
+	opacity: 1;
+}
+
+.member-social a::after {
+	visibility: hidden;
+}
+
+aside {
+	flex: 5;
+	margin: 4rem 2rem 0 0;
+}
+
+aside ul {
+	list-style: none;
+	margin: 0.6rem 0;
+	padding: 0;
+}
+
+aside li,
+aside p {
+	font-size: 1.6rem;
+	line-height: 1.6;
+	margin: 0;
+}
+
+main a,
+.event-log a,
+.blog a {
+	text-decoration: none;
+	outline: none;
+	position: relative;
+}
+
+main a::after,
+.event-log a::after,
+.blog a::after {
+	position: absolute;
+	content: '';
+	height: 0.1rem;
+	bottom: -0.1rem;
+
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	width: 100%;
+	background: var(--secondary-1);
+
+	transition: 0.4s;
+}
+
+main a:link,
+.event-log a:link,
+.blog a:link {
+	color: var(--secondary-1);
+}
+
+main a:visited,
+.event-log a:visited,
+.blog a:visited {
+	color: var(--secondary-2);
+}
+
+main a:hover::after,
+.event-log a:hover::after,
+.blog a:hover::after {
+	width: 0%;
+}
+
+main a:active,
+.event-log a:active,
+.blog a:active {
+	color: var(--secondary-0);
+}
+
+.social {
+	background: var(--secondary-1);
+	color: var(--text-light-0);
+	box-shadow: 0 0 0.4rem black;
+
+	transition: all 0.5s ease;
+}
+
+.social h4 {
+	color: var(--text-light-0);
+}
+
+.social ul {
+	display: flex;
+	width: 100%;
+}
+
+.social li {
+	flex: 1;
+	padding: 3%;
+}
+
+.social img {
+	width: 100%;
+	min-width: 24px;
+
+	filter: opacity(60%);
+	transition: all 0.25s ease-in;
+}
+
+.social img:hover {
+	filter: opacity(100%);
+}
+
+.about {
+	background: var(--surface);
+	color: var(--text-dark-0);
+
+	animation: slideup 0.5s ease;
+	transition: background 0.5s ease;
+}
+
+.about a,
+.about a:link,
+.about a:visited,
+.about a:focus,
+.about a:hover,
+.about a:active {
+	color: var(--text-dark-0);
+	outline: none;
+	text-decoration: none;
+}
+
+.event-log {
+	animation: slideup 0.75s ease;
+}
+
+.social {
+	animation: slideup 1s ease;
+}
+
+.blog {
+	animation: slideup 1.25s ease;
+}
+
+.event-log,
+.blog {
+	background: var(--surface);
+}
+
+.about,
+.social,
+.event-log,
+.blog {
+	border-radius: 0 2rem;
+	box-shadow: 0 0 0.4rem black;
+	margin-bottom: 2rem;
+	padding: 2rem;
+
+}
+
+img, video {
+	max-width: 100%;
+}
+
+aside,
+nav,
+footer {
+	padding: 0;
+}
+
+h1 {
+	font-size: 4rem;
+	margin: 0;
+	text-align: center;
+	padding: 0 5%;
+}
+
+h2 {
+	font-size: 3rem;
+	color: var(--text-light-0);
+}
+
+h3 {
+	color: var(--primary-2);
+	font-size: 3rem;
+	text-align: right;
+	margin: 0;
+}
+
+h4 {
+	color: var(--primary-2);
+	font-size: 2rem;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Rokkitt', serif;
+}
+
+.linkToMore {
+	font-style: oblique;
+}
+
+footer {
+	font-size: 1.4rem;
+	flex: none;
+	margin: 0;
+}
+
+.copyleft {
+	display: inline-block;
+	transform: rotate(180deg);
+}
+
+/* Animations */
+@keyframes slideup {
+	from {
+		opacity: 0;
+		position: relative;
+		top: 5rem;
+	}
+
+	to {
+		opacity: 1;
+		position: relative;
+		top: 0;
+	}
+}
+
+@media (max-width: 720px) {
+	.sidebar-text,
+	header > h1	{
+		display: none;
+	}
+
+	#navBar {
+		flex: 2;
+	}
+
+	header img {
+		width: 100%;
+		height: auto;
+	}
+
+	nav li a {
+		text-align: center;
+	}
+
+}
