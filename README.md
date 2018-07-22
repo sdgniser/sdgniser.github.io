@@ -1,6 +1,6 @@
-# Ayush's mockup for the NISER SDG website
+##NISER SDG website
 
-## TODO:
+### TODO:
 * Align icons
 * Responsiveness
 * Images
@@ -10,8 +10,8 @@
 
 #### Update: 2018-07-17
 * The sidebar now collapses on smaller viewports (width < 720px)
-* Please let me know if this update broke something.
- --feynhat
+* ~~Please let me know if this update broke something.
+ --feynhat~~
 
 #### Update: 2018-07-19
 * "Fixed" icons: replaced Material Icons by Font Awesome
