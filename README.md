@@ -1,4 +1,4 @@
-##NISER SDG website
+## NISER SDG website
 
 ### TODO:
 * Align icons
