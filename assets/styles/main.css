@@ -136,7 +136,7 @@ main {
 
 section {
 	background: var(--surface);
-	box-shadow: 0 0 0.4rem black;
+	box-shadow: 0 0 0.2rem black;
 	margin-bottom: 2rem;
 	padding: 2rem;
 
@@ -303,7 +303,6 @@ main a:active,
 .social {
 	background: var(--secondary-1);
 	color: var(--text-light-0);
-	box-shadow: 0 0 0.4rem black;
 
 	transition: all 0.5s ease;
 }
@@ -375,7 +374,7 @@ main a:active,
 .event-log,
 .blog {
 	border-radius: 0 2rem;
-	box-shadow: 0 0 0.4rem black;
+	box-shadow: 0 0 0.2rem black;
 	margin-bottom: 2rem;
 	padding: 2rem;
 
@@ -471,10 +470,5 @@ footer {
 	nav li a {
 		text-align: center;
 	}
-}
 
-@media (max-width: 480px) {
-	aside {
-		display: none;
-	}
 }

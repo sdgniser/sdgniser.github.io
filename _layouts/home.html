@@ -1,0 +1,29 @@
+{% include header.html %}
+
+<div id="notFooter">
+	{% include navigation.html %}
+
+	<div id="mainContent">
+		<div class="flex">
+			<main>
+				<h2><i class="fas fa-home"></i> HOME</h2>
+				<section>
+					{% include welcome.html %}
+				</section>
+				<section id="events">
+					{% include events.html %}
+				</section>
+				<section id="projects">
+					{% include projects.html %}
+				</section>
+				<section id="members">
+					{% include members.html %}
+				</section>
+			</main>
+
+			{% include sidebar.html %}
+		</div>
+	</div>
+</div>
+
+{% include footer.html %}

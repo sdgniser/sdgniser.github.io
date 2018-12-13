@@ -1,0 +1,34 @@
+- name: Obi-wan Kenobi
+  class: kenobi
+  image: /assets/images/members/kenobi.jpg
+  bio: Hello there. I trained Darth Vader.
+
+- name: Anakin Skywalker
+  class: baby_vader
+  image: /assets/images/members/kenobi.jpg
+  bio: I hate sand.
+
+- name: Luke Skywalker
+  class: luke
+  image: /assets/images/members/kenobi.jpg
+  bio: It is time for the Jedi to end.
+
+- name: Rey <not found>
+  class: rey
+  image: /assets/images/members/kenobi.jpg
+  bio: My parents were no one.
+
+- name: Rey <not found>
+  class: rey
+  image: /assets/images/members/kenobi.jpg
+  bio: My parents were no one.
+
+- name: Rey <not found>
+  class: rey
+  image: /assets/images/members/kenobi.jpg
+  bio: My parents were no one.
+
+- name: Rey <not found>
+  class: rey
+  image: /assets/images/members/kenobi.jpg
+  bio: My parents were no one.

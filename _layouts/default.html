@@ -1,0 +1,20 @@
+{% include header.html %}
+
+<div id="notFooter">
+	{% include navigation.html %}
+
+	<div id="mainContent">
+		<div class="flex">
+			<main>
+				<h2><i class="fas fa-home"></i> HOME</h2>
+				<section>
+				{{ content }}
+				</section>
+			</main>
+
+			{% include sidebar.html %}
+		</div>
+	</div>
+</div>
+
+{% include footer.html %}
