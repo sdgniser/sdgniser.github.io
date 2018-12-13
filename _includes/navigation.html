@@ -11,7 +11,7 @@
 			{% for item in site.data.navigation %}
 			<li>
 				<a href="{{ item.link }}">
-					<span {% if page.url == item.link %} class="on" {% endif %}>
+					<span>
 						<i class="{{ item.icon }}"></i>
 						<span class="sidebar-text">{{ item.name }}</span>
 					</span>
