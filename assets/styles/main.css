@@ -149,6 +149,47 @@ section p {
 	line-height: 1.6;
 }
 
+div.project-tab {
+	margin: 0 1rem 2.4rem 1rem;
+}
+
+.project-tab h4 {
+	font-size: 2.4rem;
+}
+
+.project-tab ul {
+	padding: 0;
+	margin: 0.5rem 0;
+}
+
+.project-tab li {
+	color: var(--secondary-1);
+	display: inline;
+	font-size: 1.6rem;
+	padding-right: 5%;
+}
+
+.project-tab a,
+.project-tab a:link,
+.project-tab a:visited {
+	text-decoration: underline var(--primary-1);
+}
+
+.project-tab a:hover {
+	text-decoration: none;
+}
+
+.project-tab a:active {
+	color: var(--secondary-1);
+}
+
+
+span.project-des {
+	color: var(--text-dark-1);
+	font-size: 1.6rem;
+	font-style: oblique;
+}
+
 .members {
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0,1fr));

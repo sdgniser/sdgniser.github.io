@@ -1,1 +1,15 @@
 <h3>Projects</h3>
+{% for project in site.data.projects %}
+	<div class="project-tab">
+		<a href="{{ project.link }}">
+			<h4>{{ project.name }}</h4>
+		</a>
+		<span class="project-des">
+			{{ project.description }}
+		</span>
+		<ul>
+			<li><i class="fas fa-code"></i> {{ project.lang }}</li>
+			<li><i class="fas fa-balance-scale"></i> {{ project.license }}</li>
+		</ul>
+	</div>
+{% endfor %}
