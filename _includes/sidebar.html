@@ -31,37 +31,15 @@
 		</a>
 		{% endfor %}
 	</ul>
-<!---		<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-			<abbr title"r/NISER-SDG on Reddit">
-				<img src="/assets/images/social/reddit-light.png">
-			</abbr>
-		</a>
-		<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-			<abbr title"NISER-SDG on Facebook">
-				<img src="/assets/images/social/facebook-light.png">
-			</abbr>
-		</a>
-		<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-			<abbr title"@NISER-SDG on Twitter">
-				<img src="/assets/images/social/twitter-light.png">
-			</abbr>
-		</a>
-		<li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-			<abbr title"">
-				<img src="/assets/images/social/feed-light.png">
-			</abbr>
-		</a>
-		</ul> -->
 </div>
 
 <div class="blog">
 	<h4>Recent Blog Posts</h4>
 	<ul>
-		<li><a href="#">How to have fun</a></li>
-		<li><a href="#">This is how...</a></li>
-		<li><a href="#">Isn't it enough?</a></li>
-		<li><a href="#">I think it is.</a></li>
-		<li class="linkToMore"><a href="#">Archive</a></li>
-		</ul>
+		{% for post in site.posts %}
+			<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+		{% endfor %}
+		<li class="linkToMore"><a href="blog">Archive</a></li>
+	</ul>
 </div>
 </aside>

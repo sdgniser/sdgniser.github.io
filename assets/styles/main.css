@@ -147,6 +147,33 @@ section p {
 	color: var(--text-dark-0);
 	font-size: 1.6rem;
 	line-height: 1.6;
+	margin: 0.4rem 0;
+}
+
+.postsnippet ul {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.postsnippet li {
+	flex: 1;
+	display: inline-block;
+	font-size: 1.5rem;
+	color: var(--text-dark-1);
+	text-decoration: none;
+}
+
+.postsnippet
+li.author {
+	text-align: right;
+}
+
+li.author img {
+	display: inline-block;
+	border-radius: 50%;
+	width: 10%;
+	vertical-align: middle;
 }
 
 div.project-tab {
@@ -167,6 +194,18 @@ div.project-tab {
 	display: inline;
 	font-size: 1.6rem;
 	padding-right: 5%;
+}
+
+.project-tab a:visited {
+	color: var(--secondary-2);
+}
+
+.project-tab a:hover::after {
+	width: 0%;
+}
+
+.project-tab a:active {
+	color: var(--secondary-0);
 }
 
 .project-tab a,
@@ -194,6 +233,7 @@ span.project-des {
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0,1fr));
 	grid-gap: 2rem;
+	margin: 1rem;
 }
 
 .members h4 {

@@ -3,11 +3,11 @@
   icon: fas fa-home
 
 - name: Events
-  link: #events
+  link: /#events
   icon: fas fa-calendar-alt
 
 - name: Projects
-  link: #projects
+  link: /#projects
   icon: fas fa-code-branch
 
 - name: Blog
@@ -15,5 +15,5 @@
   icon: fas fa-newspaper
 
 - name: Members
-  link: #members
+  link: /#members
   icon: fas fa-users
