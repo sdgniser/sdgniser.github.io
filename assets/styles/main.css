@@ -138,7 +138,7 @@ section {
 	background: var(--surface);
 	box-shadow: 0 0 0.2rem black;
 	margin-bottom: 2rem;
-	padding: 2rem;
+	padding: 1.6rem;
 
 	animation: slideup 0.5s ease;
 }
@@ -164,8 +164,12 @@ section p {
 	text-decoration: none;
 }
 
-.postsnippet
-li.author {
+.postsnippet li.date {
+	display: flex;
+	align-items: center;
+}
+
+.postsnippet li.author {
 	text-align: right;
 }
 
