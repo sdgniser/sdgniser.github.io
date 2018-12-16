@@ -5,10 +5,9 @@ layout: default
 
 <h2><i class="fas fa-newspaper"></i> BLOG</h2>
 {% for post in site.posts %}
+<a href="{{ post.url }}" class="postsnippet">
 	<section class="postsnippet">
-		<a href="{{ post.url }}">
 			<h3>{{ post.title }}</h3>
-		</a>
 		<ul>
 			<li class="date">
 				<span class="date">
@@ -21,7 +20,7 @@ layout: default
 				<span class="author"> {{ post.author }}</span>
 			</li>
 		</ul>
-		<p>{{ post.excerpt }} </p>
-		<p><a href="{{ post.url }}" class="linkToMore">More</a></p>
+		{{ post.excerpt }}
 	</section>
+</a>
 {% endfor %}

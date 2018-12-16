@@ -150,6 +150,13 @@ section p {
 	margin: 0.4rem 0;
 }
 
+section.postsnippet:hover {
+}
+
+section.postsnippet > h3 {
+	text-align: unset;
+}
+
 .postsnippet ul {
 	display: flex;
 	margin: 0;
@@ -246,11 +253,6 @@ span.project-des {
 	margin: 0;
 	padding: 0;
 	text-align: center;
-}
-
-.kenobi {
-	grid-column: 1;
-	grid-row: 1;
 }
 
 .member-image {
@@ -532,7 +534,16 @@ footer {
 	}
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1024px) {
+	.members {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-gap: 4%;
+	}
+}
+
+
+@media (max-width: 800px) {
 	.sidebar-text,
 	header > h1	{
 		display: none;
@@ -552,15 +563,13 @@ footer {
 	}
 
 	.members {
-		display: block;
-	}
-
-	.members img {
-		padding: 2rem;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-gap: 6%;
 	}
 
 	.member-social li {
-		padding: 0;
+		padding: 1%;
 	}
 
 	li.author img {
@@ -573,14 +582,31 @@ footer {
 
 	.social ul {
 		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		grid-gap: 1.8rem;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-gap: 6%;
 	}
-
-}
 
 @media (max-width: 480px) {
 	aside {
 		display: none;
+	}
+	
+	.postsnippet ul,
+	.postsnippet li {
+		display: unset;
+	}
+
+	.postsnippet li {
+		padding: 0.2rem;
+	}
+}
+
+@media (max-width: 360px) {
+	.members img {
+		padding: 5% 12%;
+	}
+
+	.members {
+		display: block;
 	}
 }
