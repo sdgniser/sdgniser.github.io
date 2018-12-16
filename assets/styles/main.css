@@ -192,6 +192,24 @@ div.project-tab {
 	font-size: 2.4rem;
 }
 
+div.project-tab > h4 > a::after {
+	background: var(--primary-2);
+	bottom: 0.3rem;
+	height: 0.1rem;
+}
+
+div.project-tab > h4 > a:link {
+	color: var(--primary-2);
+}
+
+div.project-tab > h4 > a:visited {
+	color: var(--primary-1);
+}
+
+div.project-tab > h4> a:active {
+	color: var(--primary-0);
+}
+
 .project-tab ul {
 	padding: 0;
 	margin: 0.5rem 0;
@@ -203,33 +221,6 @@ div.project-tab {
 	font-size: 1.6rem;
 	padding-right: 5%;
 }
-
-.project-tab a:visited {
-	color: var(--secondary-2);
-}
-
-.project-tab a:hover::after {
-	width: 0%;
-}
-
-.project-tab a:active {
-	color: var(--secondary-0);
-}
-
-.project-tab a,
-.project-tab a:link,
-.project-tab a:visited {
-	text-decoration: underline var(--primary-1);
-}
-
-.project-tab a:hover {
-	text-decoration: none;
-}
-
-.project-tab a:active {
-	color: var(--secondary-1);
-}
-
 
 span.project-des {
 	color: var(--text-dark-1);
