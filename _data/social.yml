@@ -19,6 +19,6 @@
   tooltip: NISER-SDG on Twitter
 
 - name: Feed
-  link: /
+  link: /feed.xml
   image: /assets/images/social/feed-light.png
   tooltip: Follow our RSS feed

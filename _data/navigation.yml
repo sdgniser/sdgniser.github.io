@@ -11,7 +11,7 @@
   icon: fas fa-code-branch
 
 - name: Blog
-  link: /blog
+  link: /blog.html
   icon: fas fa-newspaper
 
 - name: Members
