@@ -1,0 +1,17 @@
+{% include header.html %}
+
+<div id="notFooter">
+	{% include navigation.html %}
+
+	<div id="mainContent">
+		<div class="flex">
+			<main>
+				{{ content }}
+			</main>
+
+			{% include sidebar.html %}
+		</div>
+	</div>
+</div>
+
+{% include footer.html %}

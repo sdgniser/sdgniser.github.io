@@ -1,0 +1,17 @@
+- name: NISER Courses Wiki
+  link: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+  description: This is a placeholder text. Your mom is too fat to fit in here. Your mom is too fat to fit in here. Your mom is too fat to fit in here. Your mom is too fat to fit in here. 
+  lang: Python, CSS
+  license: AGPL
+
+- name: Not NISER Courses Wiki
+  link: /
+  description: This is a placeholder text. Your mom is too fat to fit in here. Your mom is too fat to fit in here. Your mom is too fat to fit in here. Your mom is too fat to fit in here. 
+  lang: C++
+  license: LGPL
+
+- name: NISER Lorem Ipsum Generator
+  link: /
+  description: This is a placeholder text. Your mom is too fat to fit in here. Your mom is too fat to fit in here. Your mom is too fat to fit in here. Your mom is too fat to fit in here. 
+  lang: Node.JS
+  license: MIT

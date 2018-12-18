@@ -1,0 +1,22 @@
+<div id="navBar"><div id="innerNavBar">
+	<header>
+		<a href="index.html">
+			<img src="/assets/images/ls1.png">
+		</a>
+		<h1 id="mainh1">NISER SDG</h1>
+	</header>
+
+	<nav>
+		<ul>
+			{% for item in site.data.navigation %}
+			<li>
+				<a href="{{ item.link }}">
+					<span {% if page.url == item.link %} class="on" {% endif %}>
+						<i class="{{ item.icon }}"></i>
+						<span class="sidebar-text">{{ item.name }}</span>
+					</span>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+</div></div>

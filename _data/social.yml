@@ -1,0 +1,24 @@
+- name: GitHub
+  link: /
+  image: /assets/images/social/github-light.png
+  tooltip: NISER-Software-Development-Group on GitHub
+
+- name: Reddit
+  link: /
+  image: /assets/images/social/reddit-light.png
+  tooltip: r/NISER-SDG on Reddit
+
+- name: Facebook
+  link: /
+  image: /assets/images/social/facebook-light.png
+  tooltip: NISER-SDG on Facebook
+
+- name: Twitter
+  link: /
+  image: /assets/images/social/twitter-light.png
+  tooltip: NISER-SDG on Twitter
+
+- name: Feed
+  link: /feed.xml
+  image: /assets/images/social/feed-light.png
+  tooltip: Follow our RSS feed

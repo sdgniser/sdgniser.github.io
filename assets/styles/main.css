@@ -136,9 +136,9 @@ main {
 
 section {
 	background: var(--surface);
-	box-shadow: 0 0 0.4rem black;
+	box-shadow: 0 0 0.2rem black;
 	margin-bottom: 2rem;
-	padding: 2rem;
+	padding: 1.6rem;
 
 	animation: slideup 0.5s ease;
 }
@@ -147,12 +147,99 @@ section p {
 	color: var(--text-dark-0);
 	font-size: 1.6rem;
 	line-height: 1.6;
+	margin: 0.4rem 0;
+}
+
+section.postsnippet:hover {
+}
+
+section.postsnippet > h3 {
+	text-align: unset;
+}
+
+.postsnippet ul {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+.postsnippet li {
+	flex: 1;
+	display: inline-block;
+	font-size: 1.5rem;
+	color: var(--text-dark-1);
+	text-decoration: none;
+}
+
+.postsnippet li.date {
+	display: flex;
+	align-items: center;
+}
+
+.postsnippet li.author {
+	text-align: right;
+}
+
+li.author img {
+	display: inline-block;
+	border-radius: 50%;
+	width: 10%;
+	vertical-align: middle;
+}
+
+li.author > i {
+	display: none;
+}
+
+div.project-tab {
+	margin: 0 1rem 2.4rem 1rem;
+}
+
+.project-tab h4 {
+	font-size: 2.4rem;
+}
+
+div.project-tab > h4 > a::after {
+	background: var(--primary-2);
+	bottom: 0.3rem;
+	height: 0.1rem;
+}
+
+div.project-tab > h4 > a:link {
+	color: var(--primary-2);
+}
+
+div.project-tab > h4 > a:visited {
+	color: var(--primary-1);
+}
+
+div.project-tab > h4> a:active {
+	color: var(--primary-0);
+}
+
+.project-tab ul {
+	padding: 0;
+	margin: 0.5rem 0;
+}
+
+.project-tab li {
+	color: var(--secondary-1);
+	display: inline;
+	font-size: 1.6rem;
+	padding-right: 5%;
+}
+
+span.project-des {
+	color: var(--text-dark-1);
+	font-size: 1.6rem;
+	font-style: oblique;
 }
 
 .members {
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0,1fr));
 	grid-gap: 2rem;
+	margin: 1rem;
 }
 
 .members h4 {
@@ -166,11 +253,6 @@ section p {
 	margin: 0;
 	padding: 0;
 	text-align: center;
-}
-
-.kenobi {
-	grid-column: 1;
-	grid-row: 1;
 }
 
 .member-image {
@@ -303,7 +385,6 @@ main a:active,
 .social {
 	background: var(--secondary-1);
 	color: var(--text-light-0);
-	box-shadow: 0 0 0.4rem black;
 
 	transition: all 0.5s ease;
 }
@@ -375,7 +456,7 @@ main a:active,
 .event-log,
 .blog {
 	border-radius: 0 2rem;
-	box-shadow: 0 0 0.4rem black;
+	box-shadow: 0 0 0.2rem black;
 	margin-bottom: 2rem;
 	padding: 2rem;
 
@@ -453,7 +534,16 @@ footer {
 	}
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1024px) {
+	.members {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-gap: 4%;
+	}
+}
+
+
+@media (max-width: 800px) {
 	.sidebar-text,
 	header > h1	{
 		display: none;
@@ -471,10 +561,52 @@ footer {
 	nav li a {
 		text-align: center;
 	}
-}
+
+	.members {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-gap: 6%;
+	}
+
+	.member-social li {
+		padding: 1%;
+	}
+
+	li.author img {
+		display: none;
+	}
+	
+	li.author > i {
+		display: unset;
+	}
+
+	.social ul {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-gap: 6%;
+	}
 
 @media (max-width: 480px) {
 	aside {
 		display: none;
+	}
+	
+	.postsnippet ul,
+	.postsnippet li {
+		display: unset;
+	}
+
+	.postsnippet li {
+		padding: 0.2rem;
+	}
+}
+
+@media (max-width: 360px) {
+	.members img {
+		padding: 5% 12%;
+	}
+
+	.members {
+		display: block;
 	}
 }

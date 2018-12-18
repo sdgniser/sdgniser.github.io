@@ -1,0 +1,22 @@
+<h3>Members</h3>
+<div class="members">
+	{% for item in site.data.members %}
+	<div class="{{ item.class }}">
+		<div class="member-image">
+			<img src="{{ item.image }}">
+			<div class="member-social">
+				<ul>
+					<li><a href="#"><img src="/assets/images/social/github-light.png"></a>
+					<li><a href="#"><img src="/assets/images/social/twitter-light.png"></a>
+					<li><a href="#"><img src="/assets/images/social/facebook-light.png"></a>
+				</ul>
+			</div>
+		</div>
+		<h4>{{ item.name }}</h4>
+		<p>
+		{{ item.bio }}
+		</p>
+	</div>
+	{% endfor %}
+</div>
+
