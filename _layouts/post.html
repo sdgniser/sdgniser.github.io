@@ -2,4 +2,32 @@
 layout: default
 ---
 
-{{ content }}
+<h2><i class="fas fa-newspaper"></i> BLOG</h2>
+
+<section class="post">
+	<h3>{{ page.title }}</h3>
+	<ul>
+		<li class="date">
+			<span class="date">
+			<i class="far fa-calendar"></i>
+			{{ page.date | date: "%-d %B %Y" }}</span>
+		</li>
+		<li class="author">
+			{% for member in site.data.members %}
+				{% assign author = member.name %}
+				{% if page.author == author %}
+					<img src=" {{ member.image }}">
+					<i class="fas fa-pen"></i>
+					<span class="author"> {{ member.full_name }}</span>
+					{% break %}
+				{% endif %}
+			{% endfor %}
+		</li>
+	</ul>
+	{{ content }}
+</section>
+<script>
+	/* Keeps the Blog link in the navbar turned on */
+	const blogLink = document.querySelector("#Blog");
+	blogLink.classList.add("on");
+</script>

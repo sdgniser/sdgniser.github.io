@@ -153,17 +153,20 @@ section p {
 section.postsnippet:hover {
 }
 
-section.postsnippet > h3 {
+section.postsnippet > h3,
+section.post > h3 {
 	text-align: unset;
 }
 
-.postsnippet ul {
+.postsnippet ul,
+.post ul {
 	display: flex;
 	margin: 0;
 	padding: 0;
 }
 
-.postsnippet li {
+.postsnippet li,
+.post li {
 	flex: 1;
 	display: inline-block;
 	font-size: 1.5rem;
@@ -171,12 +174,14 @@ section.postsnippet > h3 {
 	text-decoration: none;
 }
 
-.postsnippet li.date {
+.postsnippet li.date,
+.post li.date {
 	display: flex;
 	align-items: center;
 }
 
-.postsnippet li.author {
+.postsnippet li.author,
+.post li.author {
 	text-align: right;
 }
 

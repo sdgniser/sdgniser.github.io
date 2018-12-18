@@ -7,6 +7,8 @@
 * Welcome text
 * Blog
 * Responsiveness
+* :( Links break when they overflow into multiple lines
+* Make page scroll smoothly when links are clicked on the navbar
 
 ## How to run local instance
 * Install `ruby`, `ruby-gems`. Install `gcc` and `make` if your system doesn't already have them installed
