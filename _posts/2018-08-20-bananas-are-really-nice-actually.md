@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bananas Are Not That Nice Either!
-author: Obi-wan Kenobi
+author: kenobi
 ---
 A banana is an edible fruit – botanically a berry – produced by several kinds
 of large herbaceous flowering plants in the genus Musa.

@@ -1,24 +1,24 @@
-- name: Obi-wan Kenobi
-  class: kenobi
+- name: kenobi
+  full_name: Obi-wan Kenobi
   image: /assets/images/members/kenobi.jpg
   bio: Hello there. I trained Darth Vader.
 
-- name: Anakin Skywalker
-  class: baby_vader
+- name: baby_vader
+  full_name: Darth Vader
   image: /assets/images/members/vader.jpg
   bio: I hate sand.
 
-- name: Luke Skywalker
-  class: luke
+- name: luke
+  full_name: Luke Skywalker
   image: /assets/images/members/luke.jpg
   bio: It is time for the Jedi to end.
 
-- name: Han Solo
-  class: solo
+- name: solo
+  full_name: Han Solo
   image: /assets/images/members/hansolo.jpg
   bio: I shot first. End of story.
 
-- name: Rey <not found>
-  class: rey
+- name: rey
+  full_name: Rey
   image: /assets/images/members/rey.jpg
   bio: My parents were no one.

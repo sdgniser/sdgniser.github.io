@@ -15,9 +15,15 @@ layout: default
 				{{ post.date | date: "%-d %B %Y" }}</span>
 			</li>
 			<li class="author">
-				<img src="/assets/images/members/kenobi.jpg">
-				<i class="fas fa-pen"></i>
-				<span class="author"> {{ post.author }}</span>
+				{% for member in site.data.members %}
+					{% assign author = member.name %}
+					{% if post.author == author %}
+						<img src=" {{ member.image }}">
+						<i class="fas fa-pen"></i>
+						<span class="author"> {{ member.full_name }}</span>
+						{% break %}
+					{% endif %}
+				{% endfor %}
 			</li>
 		</ul>
 		{{ post.excerpt }}
