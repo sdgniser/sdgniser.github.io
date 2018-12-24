@@ -2,15 +2,14 @@
 (still a work in progress)
 
 ## TODO
-* The navbar links
-* Events
 * Welcome text
-* Blog
-* Responsiveness
-* :( Links break when they overflow into multiple lines
+* Events
+* Add real members
+* :( Link styling breaks when one overflows into multiple lines
 * Make page scroll smoothly when links are clicked on the navbar
+* Replace rickrolls by actual links
 
-## How to run local instance
+## How to run a local instance
 * Install `ruby`, `ruby-gems`. Install `gcc` and `make` if your system doesn't already have them installed
 * Install `jekyll` and `bundler` 'gems': `gem install jekyll bundler`
 * Clone the repo, `cd` into the cloned repo
@@ -20,3 +19,7 @@
 ### Instructions to set up RubyGems
 * Append `$(ruby -e 'print Gem.user_dir')/bin` to the `PATH` environment variable. (add `PATH="$PATH:$(ruby -e 'print Gem.user_dir')/bin"` to your `~/.profile`/`~/.bash_profile`)
 * Allow installation of gems through current user by exporting `GEM_HOME` to the local path. Run: `export GEM_HOME=$HOME/.gem`
+
+### See also
+* [Jekyll documentation](https://jekyllrb.com/docs/)
+* [ArchWiki page on Ruby](https://wiki.archlinux.org/index.php/Ruby)

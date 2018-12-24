@@ -10,10 +10,10 @@
   link: /#projects
   icon: fas fa-code-branch
 
-- name: Blog
-  link: /blog.html
-  icon: fas fa-newspaper
-
 - name: Members
   link: /#members
   icon: fas fa-users
+
+- name: Blog
+  link: /blog.html
+  icon: fas fa-newspaper
