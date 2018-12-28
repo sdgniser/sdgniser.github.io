@@ -5,6 +5,7 @@
 html {
 	font-family: 'Lato', sans-serif;
 	font-size: 10px;
+	scroll-behavior: smooth;
 }
 
 :root {
@@ -50,6 +51,17 @@ header img {
 	height: auto; 
 	display: block;
 	margin: 0 auto;
+}
+
+h2.head {
+	position: relative;
+}
+
+h2 span.head {
+	display: inline-block;
+	position: absolute;
+	right: 0;
+	visibility: hidden;
 }
 
 #notFooter {
@@ -514,6 +526,7 @@ h4 {
 }
 
 footer {
+	background: var(--primary-2);
 	font-size: 1.4rem;
 	flex: none;
 	margin: 0;
@@ -552,6 +565,10 @@ footer {
 	.sidebar-text,
 	header > h1	{
 		display: none;
+	}
+	
+	h2 span.head {
+		visibility: visible;
 	}
 
 	#navBar {

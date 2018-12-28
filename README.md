@@ -4,6 +4,7 @@
 ## TODO
 * Welcome text
 * Events
+* Footer
 * Add real members
 * :( Link styling breaks when one overflows into multiple lines
 * Make page scroll smoothly when links are clicked on the navbar
