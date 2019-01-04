@@ -27,3 +27,8 @@
   image: /assets/images/members/rey.jpg
   image-alt:
   bio: My parents were no one.
+
+- name: kss
+  full_name: K. Sannidhya Shukla
+  image: /assets/images/members/kss.png
+  bio: I code, when I am not being bad at math.
