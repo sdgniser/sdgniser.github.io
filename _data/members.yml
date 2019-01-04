@@ -2,6 +2,25 @@
   full_name: K. Sannidhya Shukla
   image: /assets/images/members/kss.png
   bio: I code, when I am not being bad at math.
+  social:
+      - name: GitHub
+        link: https://www.github.com/feynhat
+        img: github-light.png
+
+
+- name: ayush
+  full_name: Ayush Singh
+  bio: i3 + st + fish + vim
+  image: /assets/images/members/ayush.png
+  social:
+      - name: GitHub
+        link: https://www.github.com/s-ayush
+        img: github-light.png
+
+      - name: GPG Public Key
+        link: https://gist.github.com/s-ayush/7f7eb706b2799d50795cbb9edf04a6f2
+        img: gpg.png
+
 
 - name: kenobi
   full_name: Obi-wan Kenobi
@@ -11,12 +30,12 @@
   social:
       - name: GitHub
         link: #
-        img: /assets/images/social/github-light.png
+        img: github-light.png
 
       - name: Blog
         link: #
-        img: /assets/images/social/feed-light.png
+        img: feed-light.png
       
       - name: Twitter
         link: #
-        img: /assets/images/social/twitter-light.png
+        img: twitter-light.png
