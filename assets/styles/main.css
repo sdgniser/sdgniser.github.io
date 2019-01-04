@@ -266,6 +266,12 @@ section p {
   flex: 1;
   display: inline-block;
   padding: 0 3%;
+  text-align: center;
+}
+
+.member-social img {
+  width: 100%;
+  max-width: 4.2rem;
 }
 
 .member-social a,
@@ -615,6 +621,10 @@ footer {
     grid-gap: 6%;
   }
 
+  .member-social img {
+    max-width: 5.4rem;
+  }
+
 /* Navbar moves to the bottom
  * `aside` disappears */
 @media (max-width: 560px) {
@@ -660,6 +670,10 @@ footer {
   header {
     display: none;
   }
+
+  .member-social img {
+    max-width: 6.4rem;
+  }
 }
 
 /* Number of members on each row reduces to 1 */
@@ -670,5 +684,9 @@ footer {
 
   .members {
     display: block;
+  }
+
+  .member-social img {
+    max-width: 8rem;
   }
 }

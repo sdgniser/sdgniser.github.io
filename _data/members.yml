@@ -1,34 +1,22 @@
+- name: kss
+  full_name: K. Sannidhya Shukla
+  image: /assets/images/members/kss.png
+  bio: I code, when I am not being bad at math.
+
 - name: kenobi
   full_name: Obi-wan Kenobi
   image: /assets/images/members/kenobi.jpg
   image-alt:
   bio: Hello there. I trained Darth Vader.
+  social:
+      - name: GitHub
+        link: #
+        img: /assets/images/social/github-light.png
 
-- name: baby_vader
-  full_name: Darth Vader
-  image: /assets/images/members/vader.jpg
-  image-alt:
-  bio: I hate sand.
-
-- name: luke
-  full_name: Luke Skywalker
-  image: /assets/images/members/luke.jpg
-  image-alt:
-  bio: It is time for the Jedi to end.
-
-- name: solo
-  full_name: Han Solo
-  image: /assets/images/members/hansolo.jpg
-  image-alt:
-  bio: I shot first. End of story.
-
-- name: rey
-  full_name: Rey
-  image: /assets/images/members/rey.jpg
-  image-alt:
-  bio: My parents were no one.
-
-- name: kss
-  full_name: K. Sannidhya Shukla
-  image: /assets/images/members/kss.png
-  bio: I code, when I am not being bad at math.
+      - name: Blog
+        link: #
+        img: /assets/images/social/feed-light.png
+      
+      - name: Twitter
+        link: #
+        img: /assets/images/social/twitter-light.png

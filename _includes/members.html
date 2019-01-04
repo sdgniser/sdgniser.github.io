@@ -6,9 +6,9 @@
 	<img src="{{ member.image }}" alt="{{ member.image-alt }}">
       <div class="member-social">
         <ul>
-          <li><a href="#"><img src="/assets/images/social/github-light.png"></a>
-          <li><a href="#"><img src="/assets/images/social/twitter-light.png"></a>
-          <li><a href="#"><img src="/assets/images/social/facebook-light.png"></a>
+          {% for stuff in member.social %}
+            <li><a href="{{ stuff.link }}"><img src="{{ stuff.img }}" alt="Link to {{ member.full_name }}'s {{ stuff.name }}"></a>
+          {% endfor %}
         </ul>
       </div>
     </div>
