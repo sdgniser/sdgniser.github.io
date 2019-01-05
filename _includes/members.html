@@ -1,9 +1,10 @@
 <h3>Members</h3>
 <div class="members">
-  {% for member in site.data.members %}
+  {% assign sorted = (site.data.members | sort: 'full_name') %}
+  {% for member in sorted %}
   <div class="{{ member.name }}">
     <div class="member-image">
-	<img src="{{ member.image }}" alt="{{ member.full_name }}'s image">
+      <img src="{{ member.image }}" alt="{{ member.full_name }}'s image">
       <div class="member-social">
         <ul>
           {% for stuff in member.social %}
