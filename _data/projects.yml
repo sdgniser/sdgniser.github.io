@@ -1,17 +1,15 @@
-- name: NISER Courses Wiki
-  link: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-  description: This is a placeholder text. Your mom is too fat to fit in here. Your mom is too fat to fit in here. Your mom is too fat to fit in here. Your mom is too fat to fit in here. 
-  lang: Python, CSS
+- name: NISER Archive
+  link: https://10.10.0.79
+  github: https://www.github.com/feynhat/arc
+  description: An archive that hopes to contain all the quizzes, assignments, mid term and end term question papers for each iteration of a course conducted at NISER.
+  lang: Python, JavaScript
   license: AGPL
+  license-text: https://choosealicense.com/licenses/agpl-3.0/
 
-- name: Not NISER Courses Wiki
-  link: /
-  description: This is a placeholder text. Your mom is too fat to fit in here. Your mom is too fat to fit in here. Your mom is too fat to fit in here. Your mom is too fat to fit in here. 
-  lang: C++
-  license: LGPL
-
-- name: NISER Lorem Ipsum Generator
-  link: /
-  description: This is a placeholder text. Your mom is too fat to fit in here. Your mom is too fat to fit in here. Your mom is too fat to fit in here. Your mom is too fat to fit in here. 
-  lang: Node.JS
-  license: MIT
+- name: Timetable Generator
+  link: http://10.0.24.100
+  github: https://www.github.com/s-ayush/niser-timetable
+  description: A simple timetable generator for people studying at NISER. You select the courses you have registered for and click 'Generate!' and voila, you have your timetable in a nice HTML table.
+  lang: JavaScript
+  license: AGPL
+  license-text: https://choosealicense.com/licenses/agpl-3.0/

@@ -32,9 +32,9 @@
         link: #
         img: github-light.png
 
-      - name: Blog
-        link: #
-        img: feed-light.png
+      - name: GPG Public Key
+        link: https://gist.github.com/s-ayush/7f7eb706b2799d50795cbb9edf04a6f2
+        img: gpg.png
       
       - name: Twitter
         link: #

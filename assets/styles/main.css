@@ -185,20 +185,25 @@ section p {
   color: var(--primary-1);
 }
 
-.project-tab > h4> a:active {
+.project-tab > h4 > a:active {
   color: var(--primary-0);
 }
 
 .project-tab ul {
+  display: flex;
   padding: 0;
   margin: .5rem 0;
 }
 
 .project-tab li {
   color: var(--secondary-1);
-  display: inline;
+  display: inline-block;
+  flex: 1;
   font-size: 1.6rem;
-  padding-right: 5%;
+}
+
+.project-tab li a::after {
+  all: unset;
 }
 
 .project-des {
@@ -270,8 +275,9 @@ section p {
 }
 
 .member-social img {
-  width: 100%;
-  max-width: 4.2rem;
+  height: 100%;
+  max-height: 3.6rem;
+  max-width: 3.6rem;
 }
 
 .member-social a,
@@ -623,6 +629,7 @@ footer {
 
   .member-social img {
     max-width: 5.4rem;
+    max-height: 5.4rem;
   }
 
 /* Navbar moves to the bottom
@@ -678,7 +685,7 @@ footer {
 
 /* Number of members on each row reduces to 1 */
 @media (max-width: 360px) {
-  .members img {
+  .members > div {
     padding: 5% 12%;
   }
 

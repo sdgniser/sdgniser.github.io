@@ -8,8 +8,10 @@
       {{ project.description }}
     </span>
     <ul>
-      <li><i class="fas fa-code"></i> {{ project.lang }}</li>
-      <li><i class="fas fa-balance-scale"></i> {{ project.license }}</li>
+      <li><i class="fas fa-code"></i> {{ project.lang }}
+      <li><i class="fas fa-balance-scale"></i> <a href="{{ project.license-text }}">{{ project.license
+          }}</a>
+      <li><i class="fas fa-code-branch"></i> <a href="{{ project.github }}">Source Code</a>
     </ul>
   </div>
 {% endfor %}
