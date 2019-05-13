@@ -1,14 +1,9 @@
 # NISER Software Development Group's website
-(still a work in progress)
+(kind of done)
 
 ## TODO
-* Welcome text
 * Events
 * Footer
-* Add real members
-* :( Link styling breaks when one overflows into multiple lines
-* Make page scroll smoothly when links are clicked on the navbar
-* Replace rickrolls by actual links
 
 ## How to run a local instance
 * Install `ruby`, `ruby-gems`. Install `gcc` and `make` if your system doesn't already have them installed
