@@ -66,6 +66,7 @@ header img {
 #inner-navbar {
   position: sticky;
   top: 0;
+  height: 100vh;
 }
 
 #navbar hr {
@@ -431,7 +432,8 @@ main a:active,
 
 .social img {
   width: 100%;
-  min-width: 24px;
+  min-width: 2.4rem;
+  max-width: 4.8rem;
 
   filter: opacity(60%);
   transition: all .25s ease-in;

@@ -1,17 +1,12 @@
 - name: GitHub
-  link: /
+  link: https://github.com/sdgniser
   image: /assets/images/social/github-light.png
   tooltip: NISER-Software-Development-Group on GitHub
 
-- name: Reddit
-  link: /
-  image: /assets/images/social/reddit-light.png
-  tooltip: r/NISER-SDG on Reddit
-
-- name: Facebook
-  link: /
-  image: /assets/images/social/facebook-light.png
-  tooltip: NISER-SDG on Facebook
+- name: Email
+  link: mailto:sdg@niser.ac.in
+  image: /assets/images/social/email.png
+  tooltip: Email NISER SDG
 
 - name: Twitter
   link: /

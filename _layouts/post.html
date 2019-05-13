@@ -27,7 +27,5 @@ layout: default
   {{ content }}
 </section>
 <script>
-  /* Keeps the Blog link in the navbar turned on */
-  const blogLink = document.querySelector("#Blog");
-  blogLink.classList.add("on");
+  document.querySelector('nav ul li:last-child a').classList.add('on');
 </script>
