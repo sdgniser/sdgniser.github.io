@@ -366,7 +366,6 @@ aside p {
 }
 
 main a,
-.event-log a,
 .blog a {
   text-decoration: none;
   outline: none;
@@ -374,7 +373,6 @@ main a,
 }
 
 main a::after,
-.event-log a::after,
 .blog a::after {
   background: var(--secondary-1);
   content: '';
@@ -391,25 +389,21 @@ main a::after,
 }
 
 main a:link,
-.event-log a:link,
 .blog a:link {
   color: var(--secondary-1);
 }
 
 main a:visited,
-.event-log a:visited,
 .blog a:visited {
   color: var(--secondary-2);
 }
 
 main a:hover::after,
-.event-log a:hover::after,
 .blog a:hover::after {
   width: 0%;
 }
 
 main a:active,
-.event-log a:active,
 .blog a:active {
   color: var(--secondary-0);
 }
@@ -467,7 +461,6 @@ main a:active,
 
 .about,
 .social,
-.event-log,
 .blog {
   border-radius: 0 2rem;
   box-shadow: 0 0 .2rem black;
@@ -477,19 +470,14 @@ main a:active,
 }
 
 /* Entry animations */
-.event-log {
-  animation: slideup .75s ease;
-}
-
 .social {
   animation: slideup 1s ease;
 }
 
 .blog {
-  animation: slideup 1.25s ease;
+  animation: slideup .75s ease;
 }
 
-.event-log,
 .blog {
   background: var(--surface);
 }

@@ -2,19 +2,19 @@
 <div class="about">
   <a href="#"><h4>About</h4>
   <p id="pretentious-quote">
-  Really pretentious quote about what we do and why we do it. Load of bollocks, really.
-  </p></a>
+  NISER Software Development Group aims to bring together people from
+  various disciplines, who prefer a code-first approach to solving
+  problems.</p>
+  </a>
 </div>
 
-<div class="event-log">
-  <h4>Event Log</h4>
+<div class="blog">
+  <h4>Recent Blog Posts</h4>
   <ul>
-    <li><a href="#">Fun</a></li>
-    <li><a href="#">More fun</a></li>
-    <li><a href="#">Lots of fun</a></li>
-    <li><a href="#">Lots more fun</a></li>
-    <li><a href="#">We have a lot of fun</a></li>
-    <li class="linkToMore"><a href="#">More</a></li>
+    {% for post in site.posts %}
+      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+    <li class="linkToMore"><a href="blog">Archive</a></li>
   </ul>
 </div>
 
@@ -33,13 +33,4 @@
   </ul>
 </div>
 
-<div class="blog">
-  <h4>Recent Blog Posts</h4>
-  <ul>
-    {% for post in site.posts %}
-      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-    <li class="linkToMore"><a href="blog">Archive</a></li>
-  </ul>
-</div>
 </aside>
