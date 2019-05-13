@@ -1,6 +1,5 @@
-$("document").ready(function() {
-	$("#navBar li>a").on("click", function (e) {
-		$("#navBar li span.on").attr("class", "off");
-		this.children[0].setAttribute("class", "on");
-	});
-});
+// Highlight navbar links when clicked
+$('.navlink').click(function(e) {
+	$('nav > ul > li').children().removeClass('on');
+	$(this).addClass('on');
+})

@@ -108,8 +108,7 @@ nav a {
 }
 
 nav a:link,
-nav a:visited,
-nav a.off {
+nav a:visited {
   color: var(--primary-0);
 }
 
@@ -118,7 +117,7 @@ nav a:active {
   color: var(--text-light-0);
 }
 
-nav .on {
+nav a.on {
   color: var(--text-light-0);
 }
 
