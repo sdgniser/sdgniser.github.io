@@ -158,6 +158,16 @@ section {
   padding: 1.6rem;
 }
 
+#contact h3 {
+  color: var(--text-light-0);
+}
+
+#contact {
+  background: var(--secondary-1);
+  color: var(--text-light-0);
+  display: none;
+}
+
 section p {
   color: var(--text-dark-0);
   font-size: 1.6rem;
@@ -420,16 +430,22 @@ main a:active,
   color: var(--text-light-0);
 }
 
+#contact ul,
 .social ul {
   display: flex;
+  list-style: none;
   width: 100%;
+  padding: 0;
 }
 
+#contact li,
 .social li {
   flex: 1;
   padding: 3%;
+  text-align: center;
 }
 
+#contact img,
 .social img {
   width: 100%;
   min-width: 2.4rem;
@@ -439,6 +455,7 @@ main a:active,
   transition: all .25s ease-in;
 }
 
+#contact img:hover,
 .social img:hover {
   filter: opacity(100%);
 }
@@ -678,8 +695,9 @@ footer {
     max-width: 6.4rem;
   }
 
-  #members {
+  #contact {
     margin-bottom: 7rem;
+    display: inherit;
   }
 
 }
