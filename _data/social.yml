@@ -4,9 +4,9 @@
   tooltip: NISER-Software-Development-Group on GitHub
 
 - name: Email
-  link: mailto:sdg@niser.ac.in
+  link: #
   image: /assets/images/social/email.png
-  tooltip: Email NISER SDG
+  tooltip: Email NISER SDG at sdg [at] niser [dot] ac [dot] in
 
 - name: Twitter
   link: /

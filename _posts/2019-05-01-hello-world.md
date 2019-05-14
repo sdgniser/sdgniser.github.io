@@ -14,7 +14,6 @@ Archive](https://github.com/sdgniser/arc) and a [timetable
 generator](https://github.com/sdgniser/timetable), which are nearly complete
 now.
 
-NISER SDG can be contacted via email at
-[sdg@niser.ac.in](mailto:sdgniser.ac.in). You may [follow us on
+NISER SDG can be contacted via email at [sdg [at] niser [dot] ac [dot] in](). You may [follow us on
 GitHub](https://github.com/sdgniser), or
 [subscribe to our blog via RSS](/feed.xml).
