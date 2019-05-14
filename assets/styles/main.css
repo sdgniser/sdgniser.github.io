@@ -651,6 +651,10 @@ footer {
     z-index: 1;
   }
 
+  #inner-navbar {
+    height: unset;
+  }
+
   nav ul {
     display: flex;
     justify-content: center;
@@ -673,6 +677,11 @@ footer {
   .member-social img {
     max-width: 6.4rem;
   }
+
+  #members {
+    margin-bottom: 7rem;
+  }
+
 }
 
 /* Number of members on each row reduces to 1 */
