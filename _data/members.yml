@@ -1,3 +1,9 @@
+- name: smishra
+  full_name: Subhankar Mishra
+  image: /assets/images/members/smishra.jpg
+  bio: Assistant Professor, School of Computer Sciences, NISER
+  social: 
+
 - name: kss
   full_name: K. Sannidhya Shukla
   image: /assets/images/members/kss.png
@@ -10,8 +16,8 @@
 
 - name: ayush
   full_name: Ayush Singh
-  bio: i3 + st + fish + vim
-  image: /assets/images/members/ayush.png
+  bio: I write all my code in Notepad without IntelliSense.
+  image: /assets/images/members/ayush.jpg
   social:
       - name: GitHub
         link: https://www.github.com/s-ayush
