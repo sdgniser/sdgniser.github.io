@@ -1,14 +1,14 @@
 - name: NISER Archive
   link: https://10.10.0.79/
-  github: https://www.github.com/feynhat/arc
+  github: https://www.github.com/sdgniser/arc
   description: An archive that hopes to contain all the quizzes, assignments, mid term and end term question papers for each iteration of a course conducted at NISER.
-  lang: Python, JavaScript
+  lang: Python
   license: AGPL
   license-text: https://choosealicense.com/licenses/agpl-3.0/
 
 - name: Timetable Generator
-  link: http://10.0.24.100/
-  github: https://www.github.com/s-ayush/niser-timetable
+  link: http://10.10.0.79/timetable/
+  github: https://www.github.com/sdgniser/timetable
   description: A simple timetable generator for people studying at NISER. You select the courses you have registered for and click 'Generate!' and voila, you have your timetable in a nice HTML table.
   lang: JavaScript
   license: AGPL

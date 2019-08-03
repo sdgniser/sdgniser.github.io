@@ -3,6 +3,10 @@
   image: /assets/images/members/smishra.jpg
   bio: Assistant Professor, School of Computer Sciences, NISER
   social: 
+    - name: Email
+      link: /#
+      img: email.png
+      abbr: smishra [at] niser [dot] ac [dot] in
 
 - name: kss
   full_name: K. Sannidhya Shukla

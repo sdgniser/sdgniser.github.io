@@ -1,17 +1,12 @@
 - name: GitHub
   link: https://github.com/sdgniser
   image: /assets/images/social/github-light.png
-  tooltip: NISER-Software-Development-Group on GitHub
+  tooltip: NISER Software Development Group on GitHub
 
 - name: Email
   link: #
   image: /assets/images/social/email.png
   tooltip: Email NISER SDG at sdg [at] niser [dot] ac [dot] in
-
-- name: Twitter
-  link: /
-  image: /assets/images/social/twitter-light.png
-  tooltip: NISER-SDG on Twitter
 
 - name: Feed
   link: /feed.xml

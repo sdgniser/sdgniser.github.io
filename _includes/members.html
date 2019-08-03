@@ -9,7 +9,7 @@
         <ul>
           {% for stuff in member.social %}
               <li>
-                <abbr title="{{ member.full_name }}'s {{ stuff.name }}">
+                <abbr title="{{ member.full_name }}'s {{ stuff.name }} {% if stuff.abbr %} is {{ stuff.abbr }} {% endif %}">
                   <a href="{{ stuff.link }}"><img src="/assets/images/social/{{ stuff.img }}" alt="Link to {{ member.full_name }}'s {{ stuff.name }}"></a>
                 </abbr>
           {% endfor %}

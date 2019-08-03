@@ -449,7 +449,7 @@ main a:active,
 .social img {
   width: 100%;
   min-width: 2.4rem;
-  max-width: 4.8rem;
+  max-width: 4.0rem;
 
   filter: opacity(60%);
   transition: all .25s ease-in;
