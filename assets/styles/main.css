@@ -122,6 +122,10 @@ nav a.on {
   color: var(--text-light-0);
 }
 
+nav abbr {
+  text-decoration: none;
+}
+
 /* Middle pane content */
 h2 {
   position: relative;

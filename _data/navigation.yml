@@ -2,10 +2,6 @@
   link: /#
   icon: fas fa-home
 
-- name: Events
-  link: /#events
-  icon: fas fa-calendar-alt
-
 - name: Projects
   link: /#projects
   icon: fas fa-code-branch
@@ -17,3 +13,8 @@
 - name: Blog
   link: /blog.html
   icon: fas fa-newspaper
+
+- name: License
+  link: https://creativecommons.org/licenses/by-nc-sa/4.0/
+  icon: fas fa-balance-scale
+  abbr: Content on this website is licensed under CC BY-NC-SA 4.0 International license.
