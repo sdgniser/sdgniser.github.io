@@ -11,7 +11,7 @@
   icon: fas fa-users
 
 - name: Blog
-  link: /blog.html
+  link: /blog
   icon: fas fa-newspaper
 
 - name: License
