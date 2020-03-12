@@ -26,6 +26,10 @@ layout: default
   </ul>
   {{ content }}
 </section>
-<script>
-  document.querySelector('nav ul li:last-child a').classList.add('on');
-</script>
+
+<!-- Hacky -->
+  <script>
+    document.querySelector('nav ul a.Home').classList.remove('on');
+    document.querySelector('nav ul a.Blog').classList.add('on');
+  </script>
+<!-- Seriously, find a better way -->
