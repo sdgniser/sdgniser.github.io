@@ -8,15 +8,6 @@
       img: email.png
       abbr: smishra [at] niser [dot] ac [dot] in
 
-- name: kss
-  full_name: K. Sannidhya Shukla
-  image: /assets/images/members/kss.png
-  bio: I code, when I am not being bad at math.
-  social:
-      - name: GitHub
-        link: https://www.github.com/feynhat
-        img: github-light.png
-
 
 - name: ayush
   full_name: Ayush Singh
@@ -31,7 +22,6 @@
         link: https://gist.github.com/s-ayush/7f7eb706b2799d50795cbb9edf04a6f2
         img: gpg.png
 
-
 - name: JS
   full_name: Jyotirmaya Shivottam
   image: /assets/images/members/kenobi.jpg
@@ -42,3 +32,12 @@
         link: https://github.com/JeS24
         img: github-light.png
 
+
+- name: kss
+  full_name: K. Sannidhya Shukla
+  image: /assets/images/members/kss.png
+  bio: I code, when I am not being bad at math.
+  social:
+      - name: GitHub
+        link: https://www.github.com/feynhat
+        img: github-light.png
