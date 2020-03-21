@@ -15,11 +15,11 @@
   image: /assets/images/members/ayush.jpg
   social:
       - name: GitHub
-        link: https://www.github.com/s-ayush
+        link: https://www.github.com/11DE784A
         img: github-light.png
 
       - name: GPG Public Key
-        link: https://gist.github.com/s-ayush/7f7eb706b2799d50795cbb9edf04a6f2
+        link: https://gist.github.com/11DE784A/7f7eb706b2799d50795cbb9edf04a6f2
         img: gpg.png
 
 - name: JS
