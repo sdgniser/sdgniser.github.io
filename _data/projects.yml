@@ -1,15 +1,32 @@
 - name: NISER Archive
-  link: https://10.10.0.79/
+  link: http://10.0.2.35/arc
   github: https://www.github.com/sdgniser/arc
   description: An archive that hopes to contain all the quizzes, assignments, mid term and end term question papers for each iteration of a course conducted at NISER.
-  lang: Python
+  lang: Django
+  license: AGPL
+  license-text: https://choosealicense.com/licenses/agpl-3.0/
+
+- name: Spaghetti
+  link: http://10.0.2.35/spaghetti
+  github: https://www.github.com/sdgniser/spaghetti
+  description: A competitive programming platform for contests organized by the NISER Coding Club. Only supports code golf, at the moment.
+  lang: Django
+  license: AGPL
+  license-text: https://choosealicense.com/licenses/agpl-3.0/
+
+- name: Lost and Found
+  link: http://10.0.2.35/lnf
+  github: https://www.github.com/sdgniser/lnf
+  description: A directory for things lost and found in the NISER campus.
+  lang: Django
   license: AGPL
   license-text: https://choosealicense.com/licenses/agpl-3.0/
 
 - name: Timetable Generator
-  link: http://10.10.0.79/timetable/
+  link: http://10.0.2.35/timetable
   github: https://www.github.com/sdgniser/timetable
   description: A simple timetable generator for people studying at NISER. You select the courses you have registered for and click 'Generate!' and voila, you have your timetable in a nice HTML table.
   lang: JavaScript
   license: AGPL
   license-text: https://choosealicense.com/licenses/agpl-3.0/
+
