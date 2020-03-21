@@ -179,6 +179,10 @@ section p {
   margin: .4rem 0;
 }
 
+#welcome p {
+  display: none;
+}
+
 /* Projects card in the home page */
 .project-tab {
   margin: 0 1rem 2.4rem 1rem;
@@ -648,6 +652,10 @@ footer {
 /* Navbar moves to the bottom
  * `aside` disappears */
 @media (max-width: 560px) {
+  #welcome p {
+    display: unset;
+  }
+
   aside {
     display: none;
   }
