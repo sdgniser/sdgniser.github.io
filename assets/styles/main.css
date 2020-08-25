@@ -37,7 +37,7 @@ body {
 
 /* header and navbar */
 header {
-  animation: slideup .75s ease;
+  animation: fadein .5s ease;
   margin: 0;
   padding-top: 2rem;
 }
@@ -86,7 +86,7 @@ nav li {
 }
 
 nav ul {
-  animation: fadein 1s ease;
+  animation: fadein .7s ease;
   padding: 0;
 }
 
