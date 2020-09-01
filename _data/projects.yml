@@ -23,7 +23,7 @@
   license-text: https://choosealicense.com/licenses/agpl-3.0/
 
 - name: Timetable Generator
-  link: http://10.0.2.35/timetable
+  link: https://sdgniser.github.io/timetable/
   github: https://www.github.com/sdgniser/timetable
   description: A simple timetable generator for people studying at NISER. You select the courses you have registered for and click 'Generate!' and voila, you have your timetable in a nice HTML table.
   lang: JavaScript
