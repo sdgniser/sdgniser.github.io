@@ -56,3 +56,12 @@
         link: mailto:abhishek.deshmukh@niser.ac.in
         img: email.png
         abbr: abhishek [dot] deshmukh [at] niser [dot] as [dot] in
+
+- name: spandan
+  full_name: Spandan Anupam
+  image: /assets/images/members/spandan.jpeg
+  bio: Gonna give you up (for sure)
+  social:
+    - name: GitHub
+      link: https://github.com/spandananupam
+      img: github-light.png
