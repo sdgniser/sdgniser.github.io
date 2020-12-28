@@ -230,7 +230,6 @@ section p {
 .project-des {
   color: var(--text-dark-1);
   font-size: 1.6rem;
-  font-style: oblique;
 }
 
 /* Members card in the home page */
