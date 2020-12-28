@@ -370,6 +370,11 @@ aside {
   margin: 4rem 2rem 0 0;
 }
 
+#aside-wrapper {
+  position: sticky;
+  top: 2.4rem;
+}
+
 aside ul {
   list-style: none;
   margin: .6rem 0;
@@ -589,7 +594,7 @@ footer {
   .members {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-gap: 4%;
+    grid-gap: 10%;
   }
 }
 
@@ -599,6 +604,10 @@ footer {
 @media (max-width: 800px) {
   .sidebar-text,
   header > h1  {
+    display: none;
+  }
+
+  aside {
     display: none;
   }
   
@@ -619,11 +628,6 @@ footer {
     text-align: center;
   }
 
-  .members {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-gap: 6%;
-  }
 
   .member-social li {
     padding: 1%;
@@ -702,6 +706,12 @@ footer {
     display: none;
   }
 
+  .members {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 10%;
+  }
+
   .member-social img {
     max-width: 6.4rem;
   }
@@ -716,7 +726,7 @@ footer {
 /* Number of members on each row reduces to 1 */
 @media (max-width: 360px) {
   .members > div {
-    padding: 5% 12%;
+    padding: 5% 20%;
   }
 
   .members {
