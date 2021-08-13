@@ -38,3 +38,10 @@
   license: AGPL
   license-text: https://choosealicense.com/licenses/agpl-3.0/
 
+- name: NISER Canteen Menu
+  link: https://www.niser.ac.in/~smishra/canteen-menu/
+  github: https://github.com/smlab-niser/niser-canteen-menu
+  description: A simple and clean interface to get the canteens menus in NISER. Updated by the canteen employees themselves.
+  lang: HTML, CSS, Javascript
+  license: AGPL
+  license-text: https://choosealicense.com/licenses/agpl-3.0/
