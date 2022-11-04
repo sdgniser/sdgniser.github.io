@@ -8,7 +8,20 @@
       img: email.png
       abbr: smishra [at] niser [dot] ac [dot] in
 
+- name: rahul
+  full_name: Rahul Vishwakarma
+  image: https://lh3.googleusercontent.com/ogw/AOh-ky26FZkB9mFZS6EJJGE9Hy1n3ackx6d8wO0iG0VR4A
+  bio: The only people up at 3am are either in love, lonely, drunk or programmer.
+  social:
+      - name: GitHub
+        link: https://www.github.com/rahul3613
+        img: github-light.png
 
+      - name: Email
+        link: mailto:rahul.vishwakarma@niser.ac.in
+        img: email.png
+        abbr: rahul [dot] vishwakarma [at] niser [dot] as [dot] in
+        
 - name: ayush
   full_name: Ayush Singh
   bio: I write all my code in Notepad without IntelliSense.
