@@ -21,6 +21,14 @@
   lang: Django
   license: AGPL
   license-text: https://choosealicense.com/licenses/agpl-3.0/
+  
+- name: Listing
+  link: http://10.0.2.35/listings
+  github: https://www.github.com/sdgniser/listings
+  description: A place for trading things you do not need.
+  lang: Django
+  license: AGPL
+  license-text: https://choosealicense.com/licenses/agpl-3.0/
 
 - name: Reportinator
   link: https://github.com/sdgniser/reportinator
@@ -39,7 +47,7 @@
   license-text: https://choosealicense.com/licenses/agpl-3.0/
 
 - name: NISER Canteen Menu
-  link: https://www.niser.ac.in/~smishra/canteen-menu/
+  link: https://www.niser.ac.in/hostels/canteenmenu/
   github: https://github.com/smlab-niser/niser-canteen-menu
   description: A simple and clean interface to get the canteens menus in NISER. Updated by the canteen employees themselves.
   lang: HTML, CSS, Javascript
