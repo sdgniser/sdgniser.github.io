@@ -10,8 +10,8 @@
 
 - name: rahul
   full_name: Rahul Vishwakarma
-  image: https://lh3.googleusercontent.com/ogw/AOh-ky26FZkB9mFZS6EJJGE9Hy1n3ackx6d8wO0iG0VR4A
-  bio: The only people up at 3am are either in love, lonely, drunk or programmer.
+  image: /assets/images/members/rahul.jpg
+  bio: /* NO COMMENTS */
   social:
       - name: GitHub
         link: https://www.github.com/rahul3613
