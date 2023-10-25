@@ -1,0 +1,119 @@
+{
+    "current_members": [
+        {
+            "name": "Subhankar Mishra",
+            "desc": "Assistant Professor, School of Computer Sciences, NISER",
+            "image": "smishra.jpg",
+            "email": "smishra@niser.ac.in",
+            "github": "https://github.com/smlab-niser"
+        },
+        {
+            "name": "Aritra Mukhopadhyay",
+            "desc": "Peithonking",
+            "image": "aritra.jpg",
+            "email": "aritra.mukhopadhyay@niser.ac.in",
+            "github": "https://github.com/PeithonKing"
+        },
+        {
+            "name": "Gayatri",
+            "desc": "Subterranean homesick alien",
+            "image": "Gayatri.jpg",
+            "email": "gayatri.p@niser.ac.in",
+            "github": "https://github.com/gayatri-p"
+        },           
+        {
+            "name": "Shithij",
+            "desc": "Society is doomed",
+            "image": "sj.jpg",
+            "email": "shithij.t@niser.ac.in",
+            "github": "https://github.com/sugar-syrup"
+        },
+        {
+            "name": "Hari",
+            "desc": " Things are bound to happen",
+            "image": "hari.jpeg",
+            "email": "harisankar.b@niser.ac.in",
+            "github": "https://github.com/Methaphur"
+        },
+        {
+            "name": "Girija Sankar Ray",
+            "desc": "KEYBOARD NOT FOUND\nPRESS F1 TO CONTINUE",
+            "image": "girija.jpg",
+            "email": "girijasankar.ray@niser.ac.in",
+            "github": ""
+        },
+        {
+            "name": "Sagar",
+            "desc": "At the Movies",
+            "image": "sagar.jpg",
+            "email": "sagar.barad@niser.ac.in",
+            "github": ""
+        },
+        {
+            "name": "Rahul Vishwakarma",
+            "desc": "/* NO COMMENTS */",
+            "image": "rahul.jpg",
+            "email": "rahul.vishwakarma@niser.ac.in",
+            "github": "https://github.com/rahul3613"
+        },
+        {
+            "name": "Roshan",
+            "desc": "Sweeping Bishops",
+            "image": "user.jpg",
+            "email": "roshanm.philip@niser.ac.in",
+            "github": "https://github.com/SweepingBishops"
+        },
+        {
+            "name": "Sajag Kumar",
+            "desc": "I code, I philosophize.",
+            "image": "sajag.jpg",
+            "email": "sajag.kumar@niser.ac.in",
+            "github": ""
+        },
+        {
+            "name": "Abhijit Chakraborty",
+            "desc": "//:",
+            "image": "abhijit.jpg",
+            "email": "abhijit.chakraborty@niser.ac.in",
+            "github": ""
+        }
+        
+    ],
+    "older_members": [
+        {
+            "name": "K. Sannidhya Shukla",
+            "desc": "I code, when I am not being bad at math.",
+            "image": "kss.png",
+            "email": "",
+            "github": "https://github.com/feynhat"
+        },
+        {
+            "name": "Jyotirmaya Shivottam",
+            "desc": "cogito ergo sum?!",
+            "image": "kenobi.jpg",
+            "email": "jyotirmaya.shivottam@niser.ac.in",
+            "github": "https://github.com/JeS24"
+        },
+        {
+            "name": "Spandan Anupam",
+            "desc": "Gonna give you up (for sure)",
+            "image": "spandan.jpeg",
+            "email": "",
+            "github": "https://github.com/surelynottrue"
+        },
+        {
+            "name": "Abhishek Anil Deshmukh",
+            "desc": "I send emails from my terminal",
+            "image": "42207326.jpg",
+            "email": "",
+            "github": "https://github.com/Abhishek-Deshmukh"
+        },
+        {
+            "name": "Ayush Singh",
+            "desc": "I write all my code in Notepad without IntelliSense.",
+            "image": "ayush.jpg",
+            "email": "",
+            "github": "https://github.com/11DE784A"
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "blogs": [
+        {
+            "title": "Hello, world.",
+            "image": "images/HelloWorld.png",
+            "abstract": "The Software Development Group at NISER has been operational since the fall of 2018, with the aim of bringing together people from different disciplines who prefer a code first approach to solving problems.",
+            "link": "Pages/HelloWorld.html"
+        }
+    ],
+    "projects": [
+        {
+            "name": "NISER Canteen Menu",
+            "website": "https://www.niser.ac.in/hostels/canteenmenu/",
+            "source": "https://github.com/smlab-niser/niser-canteen-menu",
+            "image": "images/code.jpg"
+        },
+        {
+            "name": "Time Table Generator",
+            "website": "http://10.0.2.35/timetable/",
+            "source": "https://github.com/sdgniser/timetable",
+            "image": "images/Timetable.jpg"
+        },
+        {
+            "name": "NISER Archive",
+            "website": "http://10.0.2.35/arc/",
+            "source": "http://10.0.2.35/arc/",
+            "image": "images/code.jpg"
+        },
+        {
+            "name": "Lost and Found",
+            "website": "http://10.0.2.35/lnf/",
+            "source": "https://github.com/sdgniser/lnf",
+            "image": "/images/Search.png"
+        },
+        {
+            "name": "NISER Listings",
+            "website": "http://10.0.2.35/listings/",
+            "source": "https://github.com/sdgniser/listings",
+            "image": "images/listings.jpg"
+        },
+        {
+            "name": "ID Card (photo and signature) Collector",
+            "website": "http://10.0.2.35:8002/",
+            "source": "https://github.com/sdgniser/data_collection",
+            "image": "images/code.jpg"
+        },
+        {
+            "name": "Reportinator",
+            "website": "",
+            "source": "https://github.com/sdgniser/reportinator",
+            "image": "images/code.jpg"
+        }
+    ]
+}
