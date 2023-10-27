@@ -1,121 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta name="generator" content="Coding Club">
-  <meta name="description" content="Official website for Coding Club, NISER, Bhubaneswar.">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Coding Club | NISER</title>
-  <meta name="theme-color" content="#F7941D">
-  <link rel="stylesheet" href="style/main.min.css">
-  <link rel="shortcut icon" href="images/cc_logo.png" type="image/png">
+    <meta name="generator" content="Coding Club">
+    <meta name="description" content="Official website for Coding Club, NISER, Bhubaneswar.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Coding Club | NISER</title>
+    <meta name="theme-color" content="#F7941D">
+    <link rel="stylesheet" href="style/main.min.css">
+    <link rel="shortcut icon" href="images/cc_logo.png" type="image/png">
 </head>
+
 <body id="body">
-  <!-- navigation -->
-  <nav>
-    <svg id="nav-open" viewbox="0 0 20 20">
-      <rect class="rect-1" width="15"></rect>
-      <rect class="rect-2" width="15"></rect>
-      <rect class="rect-3" width="15"></rect>
-    </svg>
-    <svg id="nav-close" viewbox="0 0 24 24">
-      <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
-    </svg>
-    <div class="logo logo-1">
-      <img src="images/n_logo.png" alt="niser logo" id="niser-logo">
-    </div>
-    <ul>
-      <li><a href="#about" class="scroll">about&nbsp;us</a></li>
-      <li><a href="#projects" class="scroll">projects</a></li>
-      <li><a href="#team" class="scroll">team</a></li>
-      <li><a href="#blogs" class="scroll">blog</a></li>
-      <li><a href="#news" class="scroll">news</a></li>
-      <li><a href="#contact" class="scroll">contact&nbsp;us</a></li>
-    </ul>
-    <div class="logo logo-2">
-      <img src="images/cc_logo.png" alt="cc logo">
-    </div>
-  </nav>
+    <!-- navigation -->
+    <nav>
+        <svg id="nav-open" viewbox="0 0 20 20">
+            <rect class="rect-1" width="15"></rect>
+            <rect class="rect-2" width="15"></rect>
+            <rect class="rect-3" width="15"></rect>
+        </svg>
+        <svg id="nav-close" viewbox="0 0 24 24">
+            <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+            </path>
+        </svg>
+        <div class="logo logo-1">
+            <img src="images/n_logo.png" alt="niser logo" id="niser-logo">
+        </div>
+        <ul>
+            <li><a href="#about" class="scroll">about&nbsp;us</a></li>
+            <li><a href="#projects" class="scroll">projects</a></li>
+            <li><a href="#team" class="scroll">team</a></li>
+            <li><a href="#blogs" class="scroll">blog</a></li>
+            <li><a href="#news" class="scroll">news</a></li>
+            <li><a href="#contact" class="scroll">contact&nbsp;us</a></li>
+        </ul>
+        <div class="logo logo-2">
+            <img src="images/cc_logo.png" alt="cc logo">
+        </div>
+    </nav>
 
-  <!-- landing page -->
-  <section class="section section--intro">
-    <h1>
-      <span id="typing"></span>
-      <span id="typing-2"></span>
-    </h1>
-  </section>
+    <!-- landing page -->
+    <section class="section section--intro">
+        <h1>
+            <span id="typing"></span>
+            <span id="typing-2"></span>
+        </h1>
+    </section>
 
-  <!-- about us -->
-  <section class="section section--about" id="about">
-    <div class="section__content">
-      <h2 class="section__title">About Us</h2>
-      <p>We are a community of passionate people who prefer a code-first approach to solving problems.</p>
-      <p>We do everything from organising talks to coding competitions. We believe in coding our problems away.</p>
-    </div>
-    <div class="section__image">
-      <img src="images/team.svg">
-    </div>
-  </section>
+    <!-- about us -->
+    <section class="section section--about" id="about">
+        <div class="section__content">
+            <h2 class="section__title">About Us</h2>
+            <p>SDG (Software Development Group) of NISER is a subset of the coding club. We are a community of
+                passionate people who prefer a code-first approach to solving problems.</p>
+            <p>As a part of the coding club, we do everything from organising talks to coding competitions. And as a
+                part of the SDG, we make various projects, specially aimed at making our lives in NISER easier and more
+                fun. As a community, we believe in coding our problems away.</p>
+        </div>
+        <div class="section__image">
+            <img src="images/team.svg">
+        </div>
+    </section>
 
-  <!-- projects -->
-  <section class="section section--projects" id="projects">
-    <h2 class="section__title">Projects</h2>
-    <p class="section__about">Projects we have done or planning to do so</p>
-    <div class="carousel">
-      <button class="carousel__arrow" id="js-left">
-        <svg viewBox="0 0 19 31" width="30" height="30"><path id="left-arrow" d="M15.5,3.5l-12,12,12,12" transform="translate(0)" fill="none" stroke="#645a57" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/></svg>
-      </button>
-      <div class="carousel-items"></div>
-      <button class="carousel__arrow" id="js-right">
-        <svg viewBox="0 0 19 31" width="30" height="30"><path d="M3.5,27.49l12-12-12-12" transform="translate(0)" fill="none" stroke="#645a57" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/></svg>
-      </button>
-    </div>
-  </section>
+    <!-- projects -->
+    <section class="section section--projects" id="projects">
+        <h2 class="section__title">Projects</h2>
+        <p class="section__about">Projects we have done or planning to do so</p>
+        <div class="carousel">
+            <button class="carousel__arrow" id="js-left">
+                <svg viewBox="0 0 19 31" width="30" height="30">
+                    <path id="left-arrow" d="M15.5,3.5l-12,12,12,12" transform="translate(0)" fill="none"
+                        stroke="#645a57" stroke-linecap="round" stroke-linejoin="round" stroke-width="7" />
+                </svg>
+            </button>
+            <div class="carousel-items"></div>
+            <button class="carousel__arrow" id="js-right">
+                <svg viewBox="0 0 19 31" width="30" height="30">
+                    <path d="M3.5,27.49l12-12-12-12" transform="translate(0)" fill="none" stroke="#645a57"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="7" />
+                </svg>
+            </button>
+        </div>
+    </section>
 
-  <!-- team -->
-  <section class="section section--team" id="team">
-    <h2 class="section__title">MEET THE TEAM</h2>
-    <div class="team-switches">
-        <a class="team-switch team-switch-current active">CURRENT MEMBERS</a>
-        <a class="team-switch team-switch-alumni">ALUMNI</a>
-    </div>
-    <div class="team-grids">
-        <div class="team-grid team-current"></div>
-        <div class="team-grid team-alumni" style="display: none;"></div>
-    </div>
-  </section>
-  
-  <!-- blogs -->
-  <section class="section section--blogs" id="blogs">
-    <h2 class="section__title">Blogs</h2>
-    <div class="blogs"></div>
-  </section>
+    <!-- team -->
+    <section class="section section--team" id="team">
+        <h2 class="section__title">MEET THE TEAM</h2>
+        <div class="team-switches">
+            <a class="team-switch team-switch-current active">CURRENT MEMBERS</a>
+            <a class="team-switch team-switch-alumni">ALUMNI</a>
+        </div>
+        <div class="team-grids">
+            <div class="team-grid team-current"></div>
+            <div class="team-grid team-alumni" style="display: none;"></div>
+        </div>
+    </section>
 
-  <!-- news -->
-  <section class="section section--news" id="news">
-    <h2 class="section__title">News & Announcements</h2>
-    <div class="articles"></div>
-  </section>
+    <!-- blogs -->
+    <section class="section section--blogs" id="blogs">
+        <h2 class="section__title">Blogs</h2>
+        <div class="blogs"></div>
+    </section>
 
-  <!-- footer --> 
-  <footer id="contact">
-    <h2 class="section__title">Get in touch</h2>
-    <div class="social-icons">
-      <a href="mailto:code@niser.ac.in" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
-      </a>
-      <a href="https://sdgniser.github.io/feed.xml" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM128 416c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
-      </a>
-      <a href="https://github.com/sdgniser" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-      </a>
-    </div>
-    <p>&copy; 2022 National Institute of Science Education and Research, Bhubaneswar</p>
-  </footer>
+    <!-- news -->
+    <section class="section section--news" id="news">
+        <h2 class="section__title">News & Announcements</h2>
+        <div class="articles"></div>
+    </section>
 
-  <script src="https://www.unpkg.com/jquery@3.6.3/dist/jquery.min.js"></script>
-  <script src="js/app.js"></script>
+    <!-- footer -->
+    <footer id="contact">
+        <h2 class="section__title">Get in touch</h2>
+        <div class="social-icons">
+            <a href="mailto:code@niser.ac.in" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                    <path
+                        d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+                </svg>
+            </a>
+            <a href="https://sdgniser.github.io/feed.xml" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                    <path
+                        d="M0 64C0 46.3 14.3 32 32 32c229.8 0 416 186.2 416 416c0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96C14.3 96 0 81.7 0 64zM128 416c0 35.3-28.7 64-64 64s-64-28.7-64-64s28.7-64 64-64s64 28.7 64 64zM32 160c159.1 0 288 128.9 288 288c0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224c-17.7 0-32-14.3-32-32s14.3-32 32-32z" />
+                </svg>
+            </a>
+            <a href="https://github.com/sdgniser" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 496 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                    <path
+                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                </svg>
+            </a>
+        </div>
+        <p>&copy; 2022 National Institute of Science Education and Research, Bhubaneswar</p>
+    </footer>
+
+    <script src="https://www.unpkg.com/jquery@3.6.3/dist/jquery.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
+
 </html>
