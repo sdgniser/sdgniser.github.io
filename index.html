@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Coding Club | NISER</title>
     <meta name="theme-color" content="#F7941D">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
     <link rel="stylesheet" href="style/main.min.css">
     <link rel="shortcut icon" href="images/cc_logo.png" type="image/png">
 </head>
@@ -32,9 +33,9 @@
         <ul>
             <li><a href="#about" class="scroll">about&nbsp;us</a></li>
             <li><a href="#projects" class="scroll">projects</a></li>
-            <li><a href="#team" class="scroll">team</a></li>
             <li><a href="#blogs" class="scroll">blog</a></li>
-            <li><a href="#news" class="scroll">news</a></li>
+            <li><a href="#team" class="scroll">team</a></li>
+            <!-- <li><a href="#news" class="scroll">news</a></li> -->
             <li><a href="#contact" class="scroll">contact&nbsp;us</a></li>
         </ul>
         <div class="logo logo-2">
@@ -84,6 +85,14 @@
                 </svg>
             </button>
         </div>
+        <!-- <div class="carousel-items"></div> -->
+    </section>
+
+    <!-- blogs -->
+    <section class="section section--blogs" id="blogs">
+        <h2 class="section__title">Blogs</h2>
+        <div class="blogs"></div>
+        <a href="https://sdgniser.github.io/coding_club_blogs/" class="blog-btn">Read All</a>
     </section>
 
     <!-- team -->
@@ -99,17 +108,11 @@
         </div>
     </section>
 
-    <!-- blogs -->
-    <section class="section section--blogs" id="blogs">
-        <h2 class="section__title">Blogs</h2>
-        <div class="blogs"></div>
-    </section>
-
     <!-- news -->
-    <section class="section section--news" id="news">
-        <h2 class="section__title">News & Announcements</h2>
+    <!-- <section class="section section--news" id="news">
+        <h2 class="section__title">Blogs</h2>
         <div class="articles"></div>
-    </section>
+    </section> -->
 
     <!-- footer -->
     <footer id="contact">
@@ -137,9 +140,10 @@
                 </svg>
             </a>
         </div>
-        <p>&copy; 2022 National Institute of Science Education and Research, Bhubaneswar</p>
+        <p>&copy; <span id="year"></span> Coding Club<br/>National Institute of Science Education and Research, Bhubaneswar</p>
     </footer>
 
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script> -->
     <script src="https://www.unpkg.com/jquery@3.6.3/dist/jquery.min.js"></script>
     <script src="js/app.js"></script>
 </body>
