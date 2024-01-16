@@ -22,16 +22,19 @@ nav {
         position: absolute;
         top: 2rem;
         right: 2rem;
-        height: 60px;
-        width:  60px;
-        fill: #ffffff82;
+        height: 50px;
+        width:  50px;
+        fill: #ffffff5c;
         display: none;
     }
     &.small {
         top: 2rem;
         left: 2rem;
-        height: 60px;
-        width:  60px;
+        height: 43px;
+        width:  43px;
+        padding: 0;
+        // justify-content: center;
+        border-radius: 5px;
         ul {
             display: none;
         }
@@ -40,17 +43,19 @@ nav {
         }
         
         #nav-open {
-            display: block;
+            display: inline-block;
             position: absolute;
-            top: 0;
-            left: 0;
-            height: 60px;
-            width: 60px;
-            padding: 0 0 0 10px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            // height: 100%;
+            // width: 100%;
+            // padding: 0 0 0 10px;
             rect {
                 fill: $yellow;
-                height: 3px;
-                rx: 1px;
+                height: 2px;
+                rx: .5px;
+                width: 100%;
 
             }
             .rect-1 {
@@ -58,12 +63,12 @@ nav {
             }
         
             .rect-2 {
-                transform: translateY(8px);
-                width: 10px;
+                transform: translateY(9px);
+                width: 80%;
             }
         
             .rect-3 {
-                transform: translateY(14px);
+                transform: translateY(16px);
             }
         }
     }
@@ -129,6 +134,7 @@ nav li {
         flex-direction: column-reverse;
         justify-content: center;
         padding: 0 2rem;
+        
         ul {
             flex-direction: column;
             font-size: 2rem;
@@ -137,7 +143,7 @@ nav li {
         &.alone {
             background: #181818;
             color: #ffffff82;
-            box-shadow: none;
+            box-shadow: 0 0 10px #0008;
         }
         
     }

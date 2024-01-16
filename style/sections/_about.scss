@@ -1,5 +1,5 @@
 .section--about {
-    margin: 8rem 0;
+    margin-top: 8rem;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -41,7 +41,7 @@
 }
 
 .section__content p {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 @media (max-width: 680px) {
@@ -57,7 +57,7 @@
     }
     .section--about .section__content {
         flex: 2;
-        padding: 2rem;
+        padding: 3rem 2rem;
         position: relative;
     }
     .section--about .section__content p {

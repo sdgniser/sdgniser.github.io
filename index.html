@@ -18,9 +18,9 @@
     <!-- navigation -->
     <nav>
         <svg id="nav-open" viewbox="0 0 20 20">
-            <rect class="rect-1" width="15"></rect>
-            <rect class="rect-2" width="15"></rect>
-            <rect class="rect-3" width="15"></rect>
+            <rect class="rect-1" width="12"></rect>
+            <rect class="rect-2" width="7"></rect>
+            <rect class="rect-3" width="12"></rect>
         </svg>
         <svg id="nav-close" viewbox="0 0 24 24">
             <path
@@ -70,7 +70,7 @@
     <section class="section section--projects" id="projects">
         <h2 class="section__title">Projects</h2>
         <p class="section__about">Projects we have done or planning to do so</p>
-        <div class="carousel">
+        <!-- <div class="carousel">
             <button class="carousel__arrow" id="js-left">
                 <svg viewBox="0 0 19 31" width="30" height="30">
                     <path id="left-arrow" d="M15.5,3.5l-12,12,12,12" transform="translate(0)" fill="none"
@@ -84,8 +84,13 @@
                         stroke-linecap="round" stroke-linejoin="round" stroke-width="7" />
                 </svg>
             </button>
+        </div> -->
+        <div class="carousel-items"></div>
+        <button id="autoplay-btn">helloo</button>
+        <div id="controls-container">
+            <button id="left">&#x2190;</button>
+            <button id="right">&#x2192;</button>
         </div>
-        <!-- <div class="carousel-items"></div> -->
     </section>
 
     <!-- blogs -->
@@ -140,10 +145,11 @@
                 </svg>
             </a>
         </div>
-        <p>&copy; <span id="year"></span> Coding Club<br/>National Institute of Science Education and Research, Bhubaneswar</p>
+        <p>&copy; <span id="year"></span> Coding Club<br />National Institute of Science Education and Research,
+            Bhubaneswar</p>
     </footer>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="https://www.unpkg.com/jquery@3.6.3/dist/jquery.min.js"></script>
     <script src="js/app.js"></script>
 </body>

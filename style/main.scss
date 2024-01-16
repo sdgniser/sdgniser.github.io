@@ -45,6 +45,10 @@ $yellow-tr: #f7951d9e;
 @import 'sections/news';
 @import 'sections/footer';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', "Roboto Slab", serif;
   font-size: 1.3125rem;
