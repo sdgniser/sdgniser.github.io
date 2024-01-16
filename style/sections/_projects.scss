@@ -108,14 +108,18 @@
 #controls-container {
     font-size: 2rem;
     color: #222;
+    display: flex;
     button {
         all: unset;
         margin: 0 10px;
         background: $yellow;
-        height: 48px;
-        width: 48px;
+        height: 45px;
+        width: 45px;
         border-radius: 50%;
         transition: background .1s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     button:hover {
         background: $yellow-dark;
