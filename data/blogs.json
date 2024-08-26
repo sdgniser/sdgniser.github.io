@@ -22,9 +22,16 @@
             "author": "Aritra Mukhopadhyay"
         },
         {
+            "title": "Introduction: Linear Regression and Gradient Descent",
+            "abstract": "Although this will be a walk through the concept of Linear Regression, mainly from the point of view of Machine Learning, we will also touch upon the mathematical aspects of it and its uses in Statistical data analysis (which is primarily relevant to our lab experiments).",
+            "link": "https://sdgniser.github.io/coding_club_blogs/blogs/2024/03/24/linear-regression-and-gradient-descent.html",
+            "date": "Mar 24, 2024",
+            "author": "Aritra Mukhopadhyay"
+        },
+        {
             "title": "Why Neural Network",
             "abstract": "We want to build an intelligent system. But why neural networks? In this, we will explore the concept of universal approximation, which states that neural networks can theoretically approximate any function, given enough hidden units and a suitable activation function.",
-            "link": "https://sdgniser.github.io/coding_club_blogs/blogs/2024/03/24/linear-regression-and-gradient-descent.html",
+            "link": "https://sdgniser.github.io/coding_club_blogs/blogs/2023/11/25/Why-Neural-Network.html",
             "date": "Nov 25, 2023",
             "author": "Shriman Keshri"
         },
