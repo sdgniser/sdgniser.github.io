@@ -41,6 +41,19 @@
             "website": "",
             "source": "https://github.com/sdgniser/reportinator",
             "image": "images/code.jpg"
+        },
+        {
+            "name": "Problem Of The Week",
+            "website": "https://sdgniser.github.io/problem-of-the-week",
+            "source": "https://github.com/sdgniser/problem-of-the-week",
+            "image": "images/ #under consideration#"
+        },
+        {
+            "name": "Event Management",
+            "website": "https://sdgniser.github.io/event-management",
+            "source": "https://github.com/sdgniser/event-management",
+            "image": "images/ #under consideration#"
         }
+    
     ]
 }

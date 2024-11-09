@@ -63,15 +63,7 @@
             "website": "",
             "linkedin": ""
         },
-        {
-            "name": "Rahul Vishwakarma",
-            "desc": "/* NO COMMENTS */",
-            "image": "rahul.jpg",
-            "email": "rahul.vishwakarma@niser.ac.in",
-            "github": "https://github.com/rahul3613",
-            "website": "",
-            "linkedin": ""
-        },
+        
         {
             "name": "Roshan Mathew Phillip",
             "desc": "Now is better than never. Although never is often better than *right* now",
@@ -135,6 +127,15 @@
             "image": "42207326.jpg",
             "email": "deshmukhabhishek369@gmail.com",
             "github": "https://github.com/Abhishek-Deshmukh",
+            "website": "",
+            "linkedin": ""
+        },
+        {
+            "name": "Rahul Vishwakarma",
+            "desc": "/* NO COMMENTS */",
+            "image": "rahul.jpg",
+            "email": "rahul.vishwakarma@niser.ac.in",
+            "github": "https://github.com/rahul3613",
             "website": "",
             "linkedin": ""
         },
