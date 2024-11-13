@@ -1,22 +1,28 @@
 {
     "projects": [
         {
+            "name": "NISER Archive",
+            "website": "http://10.2.2.35/arc/",
+            "source": "http://10.2.2.35/arc/",
+            "image": "images/arc.jpg"
+        },
+        {
             "name": "NISER Canteen Menu",
             "website": "https://www.niser.ac.in/hostels/canteenmenu/",
             "source": "https://github.com/smlab-niser/niser-canteen-menu",
             "image": "images/canteen.jpg"
         },
         {
-            "name": "Time Table Generator",
-            "website": "http://10.2.2.35/timetable/",
-            "source": "https://github.com/sdgniser/timetable",
-            "image": "images/Timetable.jpg"
+            "name": "Problem Of The Week",
+            "website": "https://sdgniser.github.io/problem-of-the-week",
+            "source": "https://github.com/sdgniser/problem-of-the-week",
+            "image": "images/potw.jpg"
         },
         {
-            "name": "NISER Archive",
-            "website": "http://10.2.2.35/arc/",
-            "source": "http://10.2.2.35/arc/",
-            "image": "images/arc.jpg"
+            "name": "Event Management",
+            "website": "https://sdgniser.github.io/event-management",
+            "source": "https://github.com/sdgniser/event-management",
+            "image": "images/eventmanage.jpg"
         },
         {
             "name": "Lost and Found",
@@ -31,6 +37,12 @@
             "image": "images/listings.jpg"
         },
         {
+            "name": "Time Table Generator",
+            "website": "http://10.2.2.35/timetable/",
+            "source": "https://github.com/sdgniser/timetable",
+            "image": "images/Timetable.jpg"
+        },
+        {
             "name": "ID Card (photo and signature) Collector",
             "website": "http://10.2.2.35:8002/",
             "source": "https://github.com/sdgniser/data_collection",
@@ -41,18 +53,6 @@
             "website": "",
             "source": "https://github.com/sdgniser/reportinator",
             "image": "images/code.jpg"
-        },
-        {
-            "name": "Problem Of The Week",
-            "website": "https://sdgniser.github.io/problem-of-the-week",
-            "source": "https://github.com/sdgniser/problem-of-the-week",
-            "image": "images/potw.jpg"
-        },
-        {
-            "name": "Event Management",
-            "website": "https://sdgniser.github.io/event-management",
-            "source": "https://github.com/sdgniser/event-management",
-            "image": "images/eventmanage.jpg"
         }
     
     ]
