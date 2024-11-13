@@ -8,24 +8,6 @@
             "github": "https://github.com/smlab-niser",
             "website": "https://niser.ac.in/~smishra/",
             "linkedin": ""
-        },
-        {
-            "name": "Aritra Mukhopadhyay",
-            "desc": "Peithonking",
-            "image": "aritra.jpg",
-            "email": "aritra.mukhopadhyay@niser.ac.in",
-            "github": "https://github.com/PeithonKing",
-            "website": "",
-            "linkedin": ""
-        },
-        {
-            "name": "Gayatri",
-            "desc": "Subterranean homesick alien",
-            "image": "Gayatri.jpg",
-            "email": "gayatri.p@niser.ac.in",
-            "github": "https://github.com/gayatri-p",
-            "website": "",
-            "linkedin": ""
         },           
         {
             "name": "Shithij",
@@ -42,9 +24,76 @@
             "image": "hari.jpeg",
             "email": "harisankar.b@niser.ac.in",
             "github": "https://github.com/Methaphur",
+            "website": "https://methaphur.github.io",
+            "linkedin": "https://www.linkedin.com/in/harisankar-binod-a4071a245"
+        },
+                
+        {
+            "name": "Roshan Mathew Phillip",
+            "desc": "Now is better than never. Although never is often better than *right* now",
+            "image": "roshan.jpg",
+            "email": "roshanm.philip@niser.ac.in",
+            "github": "https://github.com/SweepingBishops",
+            "website": "https://sweepingbishops.github.io",
+            "linkedin": ""
+        },
+        {
+            "name": "Abhijeet Parida",
+            "desc": "One must imagine Sisyphus trying to survive his semester.",
+            "image": "abhijeetp.jpg",
+            "email": "abhijeet.parida@niser.ac.in",
+            "github": "https://github.com/Procuber47L",
+            "website": "https://procuber47l.github.io/",
+            "linkedin": "www.linkedin.com/in/abhijeetp1205"
+        },
+        {
+            "name": "DSV Vinay",
+            "desc": "Can't See Shit",
+            "image": "dsv.jpg",
+            "email": "dvinay.sanyasi@niser.ac.in",
+            "github": "https://github.com/DSV-Vinay",
             "website": "",
             "linkedin": ""
         },
+        {
+            "name": "Zafir K S",
+            "desc": "carpe diem",
+            "image": "zafir.jpg",
+            "email": "zafir.ks@niser.ac.in",
+            "github": "https://github.com/zafir-ks",
+            "website": "",
+            "linkedin": ""
+        },
+        {
+            "name": "Vaibhav Singh",
+            "desc": "It's more convenient that way.",
+            "image": "vaibhav.jpg",
+            "email": "vaibhav.singh@niser.ac.in",
+            "github": "",
+            "website": "",
+            "linkedin": ""
+        }
+        
+    ],
+    "older_members": [
+        {
+            "name": "Sajag Kumar",
+            "desc": "I code, I philosophize.",
+            "image": "sajag.jpg",
+            "email": "sajag.kumar@niser.ac.in",
+            "github": "",
+            "website": "",
+            "linkedin": ""
+        },
+        {
+            "name": "Abhijit Chakraborty",
+            "desc": "//:",
+            "image": "abhijit.jpg", 
+            "email": "abhijit.chakraborty@niser.ac.in",
+            "github": "",
+            "website": "",
+            "linkedin": ""
+        }
         {
             "name": "Girija",
             "desc": "I have no idea why I am here.",
@@ -64,44 +113,23 @@
             "linkedin": ""
         },
         {
-            "name": "Rahul Vishwakarma",
-            "desc": "/* NO COMMENTS */",
-            "image": "rahul.jpg",
-            "email": "rahul.vishwakarma@niser.ac.in",
-            "github": "https://github.com/rahul3613",
+            "name": "Aritra Mukhopadhyay",
+            "desc": "Peithonking",
+            "image": "aritra.jpg",
+            "email": "aritra.mukhopadhyay@niser.ac.in",
+            "github": "https://github.com/PeithonKing",
             "website": "",
             "linkedin": ""
         },
         {
-            "name": "Roshan Mathew Phillip",
-            "desc": "Now is better than never. Although never is often better than *right* now",
-            "image": "roshan.jpg",
-            "email": "roshanm.philip@niser.ac.in",
-            "github": "https://github.com/SweepingBishops",
+            "name": "Gayatri",
+            "desc": "Subterranean homesick alien",
+            "image": "Gayatri.jpg",
+            "email": "gayatri.p@niser.ac.in",
+            "github": "https://github.com/gayatri-p",
             "website": "",
             "linkedin": ""
         },
-        {
-            "name": "Sajag Kumar",
-            "desc": "I code, I philosophize.",
-            "image": "sajag.jpg",
-            "email": "sajag.kumar@niser.ac.in",
-            "github": "",
-            "website": "",
-            "linkedin": ""
-        },
-        {
-            "name": "Abhijit Chakraborty",
-            "desc": "//:",
-            "image": "abhijit.jpg",
-            "email": "abhijit.chakraborty@niser.ac.in",
-            "github": "",
-            "website": "",
-            "linkedin": ""
-        }
-        
-    ],
-    "older_members": [
         {
             "name": "K. Sannidhya Shukla",
             "desc": "I code, when I am not being bad at math.",
@@ -139,13 +167,21 @@
             "linkedin": ""
         },
         {
+            "name": "Rahul Vishwakarma",
+            "desc": "/* NO COMMENTS */",
+            "image": "rahul.jpg",
+            "email": "rahul.vishwakarma@niser.ac.in",
+            "github": "https://github.com/rahul3613",
+            "website": "",
+            "linkedin": ""
+        },
+        {
             "name": "Ayush Singh",
             "desc": "I write all my code in Notepad without IntelliSense.",
             "image": "ayush.jpg",
             "email": "",
             "github": "https://github.com/11DE784A",
             "website": "",
-            "linkedin": "",
             "linkedin": ""
         }
     ]
