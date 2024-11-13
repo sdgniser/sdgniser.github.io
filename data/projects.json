@@ -3,7 +3,7 @@
         {
             "name": "NISER Archive",
             "website": "http://10.2.2.35/arc/",
-            "source": "http://10.2.2.35/arc/",
+            "source": "https://github.com/sdgniser/arc",
             "image": "images/arc.jpg"
         },
         {
