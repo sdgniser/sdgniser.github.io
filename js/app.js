@@ -208,25 +208,24 @@ $(function () {
       const date = $blog.find('.post-meta').first().text();
       const title = $blog.find('h3.post-h3 > a').text();
       let link = $blog.find('h3.post-h3 > a').attr('href');
-
-      // Resolve relative paths
       if (link.startsWith('/')) {
-        link = blogsUrl + link.slice(1);
+        link = blogsUrl + link.slice(1); 
       }
-
+      const url = new URL(link);
+      let linkArray = url.pathname.split('/').filter(component => component);    
+      const complete_link_path = `${blogsUrl}${linkArray.slice(2).join("/")}`;
       const abstract = $blog.find('p.post-abstract').text() || 'No abstract available.';
       const author = $blog.find('.post-meta').last().text();
-
-      blogData.push({ date, title, link, abstract, author });
+      blogData.push({ date, title, complete_link_path, abstract, author });
     });
 
     // Generate blog items and append to the DOM
-    $.each(blogData, function (i, blog) {
+    $.each(blogData.slice(1), function (i, blog) {
       const blog_item = `
         <div class="blog">
           <div class="blog-content">
             <p class="blog-date">${blog.date}</p>
-            <a href="${blog.link}" target="_blank">
+            <a href="${blog.complete_link_path}" target="_blank">
               <h3 class="blog-title">${blog.title}</h3>
             </a>
             <p class="blog-abstract">${blog.abstract}</p>
