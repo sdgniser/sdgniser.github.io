@@ -132,25 +132,116 @@ $(function () {
 });
 
 // BLOGS SECTION --------------------
+// $(function () {
+//   const blogsUrl = "https://sdgniser.github.io/coding_club_blogs/";
+//   $.getJSON('data/blogs.json', function (data) {
+//     console.log('success');
+//     $.each(data.blogs, function (i, blog) {
+//       let blog_item = `<div class="blog">
+//           <div class="blog-content">
+//           <p class="blog-date">${blog.date}</p>
+//             <a href="${blog.link}"><h3 class="blog-title">${blog.title}</h3></a>
+//             <p class="blog-abstract">${blog.abstract}</p>
+//             <p class="blog-author">by ${blog.author}</p>
+//           </div>
+//           <!-- <a href="${blog.link}" class="blog-btn">Read</a> -->
+//         </div>`
+//       $('.blogs').append(blog_item);
+//     });
+//   }).error(function () {
+//     console.log('error');
+//   });
+// });
+
+// $(function () {
+//   const blogsUrl = "https://sdgniser.github.io/coding_club_blogs/";
+  
+//   $.get(blogsUrl, function (html) {
+//     console.log('Fetched blogs webpage successfully.');
+//     const $html = $(html);
+//     const blogs = $html.find('ul.post-list > li');
+
+//     blogs.each(function () {
+//       const $blog = $(this);
+//       const date = $blog.find('.post-meta').first().text();
+//       const title = $blog.find('h3.post-h3 > a').text();
+//       let link = $blog.find('h3.post-h3 > a').attr('href');
+//       if (link.startsWith('/')) {
+//         link = blogsUrl + link.slice(1); 
+//       }
+//       const url = new URL(link);
+//       let linkArray = url.pathname.split('/').filter(component => component);    
+//       const complete_link_path = `${blogsUrl}${linkArray.slice(2).join("/")}`;
+//       const author = $blog.find('.post-meta').last().text();
+//       const abstract = $blog.find('p.post-abstract').text() || 'No abstract available.';
+
+//         // Create the blog item once the abstract is fetched
+//         const blog_item = `
+//           <div class="blog">
+//             <div class="blog-content">
+//               <p class="blog-date">${date}</p>
+//               <a href="${complete_link_path}" target="_blank"><h3 class="blog-title">${title}</h3></a>
+//               <p class="blog-author">by ${author}</p>
+//               <p class="blog-abstract">${abstract}</p>
+//             </div>
+//           </div>`;
+//         $('.blogs').append(blog_item);
+//       }).fail(function () {
+//         console.log(`Error fetching blog page: ${complete_link_path}`);
+//       });
+//     });
+//   }).fail(function () {
+//     console.log('Error fetching blogs webpage.');
+//   });
 $(function () {
-  $.getJSON('data/blogs.json', function (data) {
-    console.log('success');
-    $.each(data.blogs, function (i, blog) {
-      let blog_item = `<div class="blog">
+  const blogsUrl = "https://sdgniser.github.io/coding_club_blogs/";
+
+  $.get(blogsUrl, function (html) {
+    console.log('Fetched blogs webpage successfully.');
+    const $html = $(html);
+    const blogs = $html.find('ul.post-list > li');
+
+    const blogData = [];
+
+    blogs.each(function () {
+      const $blog = $(this);
+      const date = $blog.find('.post-meta').first().text();
+      const title = $blog.find('h3.post-h3 > a').text();
+      let link = $blog.find('h3.post-h3 > a').attr('href');
+
+      // Resolve relative paths
+      if (link.startsWith('/')) {
+        link = blogsUrl + link.slice(1);
+      }
+
+      const abstract = $blog.find('p.post-abstract').text() || 'No abstract available.';
+      const author = $blog.find('.post-meta').last().text();
+
+      blogData.push({ date, title, link, abstract, author });
+    });
+
+    // Generate blog items and append to the DOM
+    $.each(blogData, function (i, blog) {
+      const blog_item = `
+        <div class="blog">
           <div class="blog-content">
-          <p class="blog-date">${blog.date}</p>
-            <a href="${blog.link}"><h3 class="blog-title">${blog.title}</h3></a>
+            <p class="blog-date">${blog.date}</p>
+            <a href="${blog.link}" target="_blank">
+              <h3 class="blog-title">${blog.title}</h3>
+            </a>
             <p class="blog-abstract">${blog.abstract}</p>
             <p class="blog-author">by ${blog.author}</p>
           </div>
-          <!-- <a href="${blog.link}" class="blog-btn">Read</a> -->
-        </div>`
+        </div>`;
       $('.blogs').append(blog_item);
     });
-  }).error(function () {
-    console.log('error');
+  }).fail(function () {
+    console.log('Error fetching blogs webpage.');
   });
 });
+
+
+
 
 // NEWS SECTION --------------------
 $(function () {

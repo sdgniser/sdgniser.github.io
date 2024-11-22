@@ -72,6 +72,15 @@
             "github": "",
             "website": "",
             "linkedin": ""
+        },  
+        {
+            "name": "Girija",
+            "desc": "I have no idea why I am here.",
+            "image": "girija.jpg",
+            "email": "girijasankar.ray@niser.ac.in",
+            "github": "https://github.com/Alpha3125",
+            "website": "",
+            "linkedin": ""
         }
         
     ],
@@ -91,15 +100,6 @@
             "image": "abhijit.jpg", 
             "email": "abhijit.chakraborty@niser.ac.in",
             "github": "",
-            "website": "",
-            "linkedin": ""
-        },  
-        {
-            "name": "Girija",
-            "desc": "I have no idea why I am here.",
-            "image": "girija.jpg",
-            "email": "girijasankar.ray@niser.ac.in",
-            "github": "https://github.com/Alpha3125",
             "website": "",
             "linkedin": ""
         },
