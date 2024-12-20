@@ -1,3 +1,13 @@
+html {
+    --carousel-back: #eee;
+    --carousel-text: #222;
+}
+
+html[data-theme='dark'] {
+    --carousel-back: #1c182e;
+    --carousel-text: #eee;
+}
+
 .section--projects {
     text-align: center;
     padding: 6rem 1rem;
@@ -74,7 +84,7 @@
     .carousel__caption {
         position: relative;
         z-index: 10;
-        background: #eee;
+        background: var(--carousel-back);
         font-family: $bold;
         line-height: 1.5;
         font-weight: 700;
@@ -85,7 +95,7 @@
 
 
 .carousel__title {
-    color: #222;
+    color: var(--carousel-text);
     font-size: 1.5rem;
 }
 
@@ -107,7 +117,7 @@
 
 #controls-container {
     font-size: 2rem;
-    color: #222;
+    color: var(--carousel-text);
     display: flex;
     button {
         all: unset;

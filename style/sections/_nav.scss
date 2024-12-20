@@ -1,3 +1,17 @@
+html {
+    --nav-text:#ffffff82;
+    --nav-text-alone:#181818;
+    --nav-back-alone:#fff;
+    --nav-logo-fill: #0066ff;
+}
+
+html[data-theme='dark'] {
+    --nav-text:#ffffff82;
+    --nav-text-alone:#eee;
+    --nav-back-alone:#0f091f;
+    --nav-logo-fill:#fff;
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -11,8 +25,8 @@ nav {
     display: flex;
     justify-content: space-evenly;
     &.alone {
-        color: #181818;
-        background: #fff;
+        color: var(--nav-text-alone);
+        background:var(--nav-back-alone);
         box-shadow: 0 3px 20px rgba(0, 0, 0, 0.322);
     }
     svg {
@@ -80,6 +94,7 @@ nav {
         height: 100%;
     }
     &.logo-1 {
+        fill: #eee;
         padding: 10px;
     }
 }
@@ -88,7 +103,7 @@ nav ul {
     display: flex;
     list-style: none;
     justify-content: space-around;
-    max-width: 450px;
+    // max-width: 450px;
     margin: auto 0;
     transition: .5s ease-in
 }
