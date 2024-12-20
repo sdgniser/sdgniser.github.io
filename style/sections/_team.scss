@@ -1,17 +1,3 @@
-html {
-    --team-switch: #444;
-    --team-member: #111;
-    --team-member-back: #fff0;
-    --team-socials: #444;
-}
-
-html[data-theme='dark'] {
-    --team-switch: #eee;
-    --team-member: #eee;
-    --team-member-back: #141123;
-    --team-socials: #aaa;
-  }
-
 .section--team {
     text-align: center;
     display: flex;
@@ -30,7 +16,7 @@ html[data-theme='dark'] {
 .team-switches {
     margin: 1rem 0 3rem 0;
     font-family: 'Poppins', sans-serif;
-    color: var(--team-switch);
+    color: #444;
 
     .team-switch {
         margin: 0 20px;
@@ -44,7 +30,7 @@ html[data-theme='dark'] {
         position: absolute;
         bottom: 5px;
         left: 0;
-        height: 5px;
+        height: 8px;
         width: 0;
         background: $yellow-tr;
         z-index: -1;
@@ -76,23 +62,21 @@ html[data-theme='dark'] {
 }
 
 .member-card {
-    // height: 22rem;
+    height: 20rem;
     width: 14rem;
     overflow: hidden;
     box-shadow: 0 10px 1rem #0002;
-    border-radius: 10px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--team-member-back);
-    padding-top: 10px;
     
     figcaption {
         font-family: 'Poppins', sans-serif;
-        padding: .7rem;
+        padding: 1rem;
         text-align: center;
-        color: var(--team-member);
+        color: #111;
     }
 }
 
@@ -116,14 +100,14 @@ html[data-theme='dark'] {
 }
 
 .member-desc {
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .member-socials {
     margin-top: 5px;
     svg {
         height: 20px;
-        fill: var(--team-socials);
+        fill: #444;
         margin: 0 5px;
         cursor: pointer;
         transition: .1s ease-in-out;

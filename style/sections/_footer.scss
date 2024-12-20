@@ -1,19 +1,7 @@
-html {
-    --footer-text: #D1C9C1;
-    // --footer-back: #111a1d;
-    --footer-social: #a49b92;
-}
-
-html[data-theme='dark'] {
-    --footer-text: #111a1d;
-    // --footer-back: #222;
-    --footer-social: #111a1d;
-}
-
 footer {
     text-align: center;
     padding: 30px 0;
-    color: var(--footer-text);
+    color: #D1C9C1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +9,7 @@ footer {
     align-items: center ;
     
     h2.section__title {
-        color: var(--footer-text);
+        color: $yellow;
     }
     p {
         justify-self: end;
@@ -39,12 +27,12 @@ footer {
     svg {
         width: 30px;
         height: 30px;
-        fill: var(--footer-social);
+        fill: #a49b92;
         transition: fill .1s ease-in-out;
         cursor: pointer;
     }
     a:hover svg{
-        fill: var(--dark-btn-hover);
+        fill: $yellow;
     }
 }
 
