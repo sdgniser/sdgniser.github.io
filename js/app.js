@@ -1,14 +1,4 @@
-const elem = selector => {
-  return document.querySelector(selector)
-}
-
-const today = new Date()
-document.getElementById('year').innerHTML = today.getFullYear()
-
-$('#theme-switch').click(function () {
-  darkModeSwitcher()
-})
-
+// by default, the dark mode is switched off
 var darkMode = false;
 document.documentElement.setAttribute('data-theme', ['dark', 'light'][darkMode]);
 if (darkMode) {
@@ -17,18 +7,27 @@ if (darkMode) {
   $('#theme-switch').html('☀️')
 }
 
-function darkModeSwitcher () {
-
-    document.documentElement.setAttribute('data-theme', ['dark', 'light'][+darkMode]);
+function darkModeSwitcher () {  
+  document.documentElement.setAttribute('data-theme', ['dark', 'light'][+darkMode]);
     darkMode = !darkMode;
-
+    
     if (darkMode) {
       $('#theme-switch').html('🌙')
     } else {
       $('#theme-switch').html('☀️')
     }
-
 }
+
+$('#theme-switch').click(function () {
+  darkModeSwitcher()
+})
+
+const elem = selector => {
+  return document.querySelector(selector)
+}
+
+const today = new Date()
+document.getElementById('year').innerHTML = today.getFullYear()
 
 // PROJECTS SECTION --------------------
 $(function () {

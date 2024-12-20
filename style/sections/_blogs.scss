@@ -3,7 +3,8 @@ html {
     --dark-back-text-title: rgb(247, 148, 29);
     --dark-back-text: #eee;
     --dark-btn-hover: #e48209;
-  }
+    --dark-btn: #fff0;
+}
   
 html[data-theme='dark'] {
     // --dark-back-text: #111a1d;
@@ -12,8 +13,9 @@ html[data-theme='dark'] {
     // --dark-btn-hover: #000;
     --dark-back-text: #c5d3d8;
     --dark-back: #F7941D;
-    --dark-back-text-title: #ffffff;
-    --dark-btn-hover: #000;
+    --dark-back-text-title: #F7941D;
+    --dark-btn-hover: #e48209;
+    --dark-btn: #fff0;
   }
 
 .section--blogs {
@@ -69,6 +71,7 @@ html[data-theme='dark'] footer {
 
 .blog-title {
     cursor: pointer;
+    color: var(--dark-back-text-title);
 
     &:hover {
         text-decoration: underline;
@@ -81,7 +84,7 @@ html[data-theme='dark'] footer {
 }
 
 .blog-date {
-    color: var(--dark-back-text-title);
+    color: var(--dark-back-text);
 }
 
 .blog-abstract {
@@ -94,11 +97,12 @@ html[data-theme='dark'] footer {
 }
 
 .blog-btn {
-    background: var(--dark-back-text-title);
+    background: var(--dark-btn);
     padding: 3px 8px;
-    color: var(--dark-back);
+    color: var(--dark-back-text-title);
     transition: background .1s ease-in-out;
     &:hover {
+        color: #fff;
         background: var(--dark-btn-hover);
     }
 }
