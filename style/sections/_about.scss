@@ -61,6 +61,7 @@
         position: relative;
     }
     .section--about .section__content p {
-        color: var(--about-text)
+        color: var(--about-text);
+        font-size: 1.2rem;
     }
 }
