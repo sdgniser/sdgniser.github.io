@@ -1,7 +1,19 @@
+html {
+    --footer-text: #D1C9C1;
+    // --footer-back: #111a1d;
+    --footer-social: #a49b92;
+}
+
+html[data-theme='dark'] {
+    --footer-text: #111a1d;
+    // --footer-back: #222;
+    --footer-social: #111a1d;
+}
+
 footer {
     text-align: center;
     padding: 30px 0;
-    color: #D1C9C1;
+    color: var(--footer-text);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,7 +21,7 @@ footer {
     align-items: center ;
     
     h2.section__title {
-        color: $yellow;
+        color: var(--footer-text);
     }
     p {
         justify-self: end;
@@ -27,12 +39,12 @@ footer {
     svg {
         width: 30px;
         height: 30px;
-        fill: #a49b92;
+        fill: var(--footer-social);
         transition: fill .1s ease-in-out;
         cursor: pointer;
     }
     a:hover svg{
-        fill: $yellow;
+        fill: var(--dark-btn-hover);
     }
 }
 

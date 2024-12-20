@@ -5,6 +5,31 @@ const elem = selector => {
 const today = new Date()
 document.getElementById('year').innerHTML = today.getFullYear()
 
+$('#theme-switch').click(function () {
+  darkModeSwitcher()
+})
+
+var darkMode = false;
+document.documentElement.setAttribute('data-theme', ['dark', 'light'][darkMode]);
+if (darkMode) {
+  $('#theme-switch').html('🌙')
+} else {
+  $('#theme-switch').html('☀️')
+}
+
+function darkModeSwitcher () {
+
+    document.documentElement.setAttribute('data-theme', ['dark', 'light'][+darkMode]);
+    darkMode = !darkMode;
+
+    if (darkMode) {
+      $('#theme-switch').html('🌙')
+    } else {
+      $('#theme-switch').html('☀️')
+    }
+
+}
+
 // PROJECTS SECTION --------------------
 $(function () {
   $.getJSON('data/projects.json', function (data) {
@@ -282,11 +307,11 @@ $(window).scroll(function () {
   // NAVIGATION
   if (wScroll > introHeight) {
     nav.classList.add('alone')
-    $('#niser-logo').attr("src", "images/n_logo_color.png")
+    // $('#niser-logo').attr("src", "images/n_logo_color.png")
   }
   if (wScroll < introHeight) {
     nav.classList.remove('alone')
-    $('#niser-logo').attr("src", "images/n_logo.png")
+    // $('#niser-logo').attr("src", "images/n_logo.png")
   }
 
   // LANDING ELEMENTS
