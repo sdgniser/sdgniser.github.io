@@ -2,7 +2,7 @@
     "projects": [
         {
             "name": "NISER Archive",
-            "website": "http://10.2.2.35/arc/",
+            "website": "http://10.1.32.21/arc/",
             "source": "https://github.com/sdgniser/arc",
             "image": "images/arc.jpg"
         },
@@ -26,25 +26,25 @@
         },
         {
             "name": "Lost and Found",
-            "website": "http://10.2.2.35/lnf/",
+            "website": "http://10.1.32.21/lnf/",
             "source": "https://github.com/sdgniser/lnf",
             "image": "images/lost.jpg"
         },
         {
             "name": "NISER Listings",
-            "website": "http://10.2.2.35/listings/",
+            "website": "http://10.1.32.21/listings/",
             "source": "https://github.com/sdgniser/listings",
             "image": "images/listings.jpg"
         },
         {
             "name": "Time Table Generator",
-            "website": "http://10.2.2.35/timetable/",
+            "website": "http://10.1.32.21/timetable/",
             "source": "https://github.com/sdgniser/timetable",
             "image": "images/Timetable.jpg"
         },
         {
             "name": "ID Card (photo and signature) Collector",
-            "website": "http://10.2.2.35:8002/",
+            "website": "http://10.1.32.21:8002/",
             "source": "https://github.com/sdgniser/data_collection",
             "image": "images/id.jpg"
         },
