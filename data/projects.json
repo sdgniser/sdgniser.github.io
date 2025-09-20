@@ -2,7 +2,7 @@
     "projects": [
         {
             "name": "NISER Archive",
-            "website": "http://10.1.32.21/arc/",
+            "website": "http://10.10.0.173/arc/",
             "source": "https://github.com/sdgniser/arc",
             "image": "images/arc.jpg"
         },
