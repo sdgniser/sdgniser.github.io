@@ -1,69 +1,80 @@
+//HELPERS
+const $id = id => document.getElementById(id);
+const $ = (selector, parent = document) => parent.querySelector(selector);
+const $$ = (selector, parent = document) => Array.from(parent.querySelectorAll(selector));
+const afterLoading = callback => document.addEventListener('DOMContentLoaded', callback)
+function fetchAdv(responseHandler, path, onSuccess = x => x, onError = console.error) {
+  fetch(path).then(response => {
+      if (!response.ok) throw new Error('Network response was not ok');
+      return responseHandler(response);
+    })
+    .then(data => onSuccess(data))
+    .catch(err => onError(err));
+}
+const getJSON = (path, onSuccess, onError) => fetchAdv(res => res.json(), path, onSuccess, onError);
+const getHTML = (path, onSuccess, onError) => fetchAdv(
+  res => res.text().then(str => new DOMParser().parseFromString(str, 'text/html')),
+  path, onSuccess, onError
+);
+//EFFECTS
+function fadeOut(el, duration = 400) {
+  return new Promise(resolve => {
+    el.style.transition = `opacity ${duration}ms ease`;
+    el.style.opacity = 0;
+    setTimeout(() => resolve(el.style.display = 'none'), duration);
+  });
+}
+function fadeIn(el, duration = 400, display = 'block') {
+  return new Promise(resolve => {
+    el.style.display = display;
+    el.style.opacity = 0;
+    el.style.transition = `opacity ${duration}ms ease`;
+    requestAnimationFrame(() => el.style.opacity = 1);
+    setTimeout(() => resolve(), duration);
+  });
+}
+function hide(el) { el.style.display = 'none'; }
+function switchClass(el, prevClass, newClass) {
+  el.classList.remove(prevClass)
+  el.classList.add(newClass)
+}
+
+
 // by default, the dark mode is switched off
-var darkMode = false;
-document.documentElement.setAttribute('data-theme', ['dark', 'light'][darkMode]);
-if (darkMode) {
-  $('#theme-switch').html('🌙')
-} else {
-  $('#theme-switch').html('☀️')
+const themeSwitch = $id('theme-switch');
+let darkMode = false;
+function updateTheme() {
+  document.documentElement.dataset.theme = darkMode ? 'dark' : 'light';
+  themeSwitch.innerHTML = darkMode ? '🌙' : '☀️';
 }
+themeSwitch.onclick = () => updateTheme(darkMode = !darkMode)
+updateTheme();
 
-function darkModeSwitcher () {  
-  document.documentElement.setAttribute('data-theme', ['dark', 'light'][+darkMode]);
-    darkMode = !darkMode;
-    
-    if (darkMode) {
-      $('#theme-switch').html('🌙')
-    } else {
-      $('#theme-switch').html('☀️')
-    }
-}
-
-$('#theme-switch').click(function () {
-  darkModeSwitcher()
-})
-
-const elem = selector => {
-  return document.querySelector(selector)
-}
-
-const today = new Date()
-document.getElementById('year').innerHTML = today.getFullYear()
+$id('year').innerHTML = new Date().getFullYear()
 
 // PROJECTS SECTION --------------------
-$(function () {
-  $.getJSON('data/projects.json', function (data) {
+afterLoading(() => {
+  getJSON('data/projects.json', data => {
     console.log('projects loaded');
-    $.each(data.projects, function (i, project) {
-      let figure = `<figure class="carousel-item">
-          <div class="carousel__image">
-            <img src="${project.image}">
-          </div>
-          <figcaption class="carousel__caption">
-            <h3 class="carousel__title">${project.name}</h3>
-            <p class="carousel__subtitle"><a target="_blank" href="${project.website}">WEBSITE</a> | <a target="_blank" href="${project.source}">SOURCE CODE</a></p>
-          </figcaption>
-        </figure>`
+    $('.carousel-items').innerHTML = data.projects.map(project =>
+      `<figure class="carousel-item">
+        <div class="carousel__image">
+          <img src="${project.image}">
+        </div>
+        <figcaption class="carousel__caption">
+          <h3 class="carousel__title">${project.name}</h3>
+          <p class="carousel__subtitle"><a target="_blank" href="${project.website}">WEBSITE</a> | <a target="_blank" href="${project.source}">SOURCE CODE</a></p>
+        </figcaption>
+      </figure>`
+    ).join('');
 
-      $('.carousel-items').append(figure);
-    });
-    
-    let list = Object.values(document.querySelectorAll('.carousel-item'))
-    let length = list.length
-
-    slider = tns({
+    tns({
       container: '.carousel-items',
       items: 1,
       viewportMax: 300,
       responsive: {
-        350: {
-          // fixedWidth: 400,
-          items: 2,
-          gutter: 20
-        },
-        500: {
-          items: 3,
-          gutter: 20
-        }
+        350: { items: 2, gutter: 20 },
+        500: { items: 3, gutter: 20 }
       },
       center: true,
       rewind: true,
@@ -74,36 +85,8 @@ $(function () {
       autoplayButton: "#autoplay-btn",
       controlsContainer: "#controls-container",
       navAsThumbnails: true
-      // prevButton: 'previous',
-      // nextButton: true
     });
-
-    // console.log(list)
-    // let translate, caption, spotlight;
-    // let middleTerm = Math.ceil((length - 1) / 2)
-    // let spotlightIndex = middleTerm
-    // left.addEventListener('click', _ => {
-    //   spotlightIndex = (spotlightIndex == 0) ? (list.length - 1) : (spotlightIndex - 1);
-    //   spotlight = list[spotlightIndex]
-    //   caption = spotlight.querySelector('figcaption')
-    //   translate = (middleTerm - spotlightIndex) * 100;
-    //   Object.keys(list).forEach(function (key) {
-    //     list[key].style.transform = 'translateX(' + translate + '%)';
-    //   })
-    // })
-    // right.addEventListener('click', _ => {
-    //   spotlightIndex = (spotlightIndex == (list.length - 1)) ? 0 : (spotlightIndex + 1);
-    //   spotlight = list[spotlightIndex]
-    //   caption = spotlight.querySelector('figcaption')
-    //   translate = (middleTerm - spotlightIndex) * 100;
-    //   Object.keys(list).forEach(function (key) {
-    //     list[key].style.transform = 'translateX(' + translate + '%)';
-    //   })
-    // })
-  }).error(function () {
-    console.log('error');
-  }
-  );
+  })
 });
 
 // TEAM SECTION --------------------
@@ -112,301 +95,149 @@ const icon_mail = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
 const icon_website = '<svg xmlns="http://www.w3.org/2000/svg" height="16" width="20" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg>'
 const icon_linkedin = '<svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>'
 
-function getMemberDetails(member) {
-  let figure = `<figure class="member-card">
-  <div class="member-image">
-    <img src="images/members/${member.image}" alt="${member.name}.jpg">
-  </div>
-  <figcaption>
-      <p class="member-name">${member.name}</p>
-      <p class="member-desc">${member.desc}</p>
-      <p class="member-socials">`
-
-  if (member.email) {
-    figure += `<a href="mailto:${member.email}">${icon_mail}</a>`
-  }
-  if (member.github) {
-    figure += `<a href="${member.github}">${icon_github}</a>`
-  }
-  if (member.website) {
-    figure += `<a href="${member.website}">${icon_website}</a>`
-  }
-  if (member.linkedin) {
-    figure += `<a href="${member.linkedin}">${icon_linkedin}</a>`
-  }
-
-  figure += `</p></figcaption></figure>`
-  return figure;
+function getMembersDetails(members) {
+  return members.map(member => `
+    <figure class="member-card">
+      <div class="member-image">
+        <img src="images/members/${member.image}" alt="${member.name}.jpg">
+      </div>
+      <figcaption>
+        <p class="member-name">${member.name}</p>
+        <p class="member-desc">${member.desc}</p>
+        <p class="member-socials">
+          ${member.email ? `<a href="mailto:${member.email}">${icon_mail}</a>` : ''} 
+          ${member.github ? `<a href="${member.github}">${icon_github}</a>` : ''}
+          ${member.website ? `<a href="${member.website}">${icon_website}</a>` : ''}
+          ${member.linkedin ? `<a href="${member.linkedin}">${icon_linkedin}</a>` : ''}
+        </p>
+      </figcaption>
+    </figure>`
+  ).join('');
 };
 
-$(function () {
-  $.getJSON('data/members.json', function (data) {
-    console.log('success');
-    $.each(data.current_members, function (i, member) {
-      let figure = getMemberDetails(member)
-      $('.team-current').append(figure);
-    });
-    $.each(data.older_members, function (i, member) {
-      let figure = getMemberDetails(member)
-      $('.team-alumni').append(figure);
-    });
-  }).error(function () {
-    console.log('error');
-  });
+afterLoading(() => {
+  getJSON('data/members.json',
+    data => {
+      console.log('success');
+      $('.team-current').innerHTML += getMembersDetails(data.current_members);
+      $('.team-alumni').innerHTML += getMembersDetails(data.older_members);
+    },
+    err => console.log(`error: ${err}`)
+  );
 });
 
-// BLOGS SECTION --------------------
-// $(function () {
-//   const blogsUrl = "https://sdgniser.github.io/coding_club_blogs/";
-//   $.getJSON('data/blogs.json', function (data) {
-//     console.log('success');
-//     $.each(data.blogs, function (i, blog) {
-//       let blog_item = `<div class="blog">
-//           <div class="blog-content">
-//           <p class="blog-date">${blog.date}</p>
-//             <a href="${blog.link}"><h3 class="blog-title">${blog.title}</h3></a>
-//             <p class="blog-abstract">${blog.abstract}</p>
-//             <p class="blog-author">by ${blog.author}</p>
-//           </div>
-//           <!-- <a href="${blog.link}" class="blog-btn">Read</a> -->
-//         </div>`
-//       $('.blogs').append(blog_item);
-//     });
-//   }).error(function () {
-//     console.log('error');
-//   });
-// });
-
-// $(function () {
-//   const blogsUrl = "https://sdgniser.github.io/coding_club_blogs/";
-  
-//   $.get(blogsUrl, function (html) {
-//     console.log('Fetched blogs webpage successfully.');
-//     const $html = $(html);
-//     const blogs = $html.find('ul.post-list > li');
-
-//     blogs.each(function () {
-//       const $blog = $(this);
-//       const date = $blog.find('.post-meta').first().text();
-//       const title = $blog.find('h3.post-h3 > a').text();
-//       let link = $blog.find('h3.post-h3 > a').attr('href');
-//       if (link.startsWith('/')) {
-//         link = blogsUrl + link.slice(1); 
-//       }
-//       const url = new URL(link);
-//       let linkArray = url.pathname.split('/').filter(component => component);    
-//       const complete_link_path = `${blogsUrl}${linkArray.slice(2).join("/")}`;
-//       const author = $blog.find('.post-meta').last().text();
-//       const abstract = $blog.find('p.post-abstract').text() || 'No abstract available.';
-
-//         // Create the blog item once the abstract is fetched
-//         const blog_item = `
-//           <div class="blog">
-//             <div class="blog-content">
-//               <p class="blog-date">${date}</p>
-//               <a href="${complete_link_path}" target="_blank"><h3 class="blog-title">${title}</h3></a>
-//               <p class="blog-author">by ${author}</p>
-//               <p class="blog-abstract">${abstract}</p>
-//             </div>
-//           </div>`;
-//         $('.blogs').append(blog_item);
-//       }).fail(function () {
-//         console.log(`Error fetching blog page: ${complete_link_path}`);
-//       });
-//     });
-//   }).fail(function () {
-//     console.log('Error fetching blogs webpage.');
-//   });
-$(function () {
+afterLoading(() => {
   const blogsUrl = "https://sdgniser.github.io/coding_club_blogs/";
 
-  $.get(blogsUrl, function (html) {
+  getHTML(blogsUrl, html => {
     console.log('Fetched blogs webpage successfully.');
-    const $html = $(html);
-    const blogs = $html.find('ul.post-list > li');
-
-    const blogData = [];
-
-    blogs.each(function () {
-      const $blog = $(this);
-      const date = $blog.find('.post-meta').first().text();
-      const title = $blog.find('h3.post-h3 > a').text();
-      let link = $blog.find('h3.post-h3 > a').attr('href');
-      if (link.startsWith('/')) {
-        link = blogsUrl + link.slice(1); 
-      }
-      const url = new URL(link);
-      let linkArray = url.pathname.split('/').filter(component => component);    
-      const complete_link_path = `${blogsUrl}${linkArray.slice(2).join("/")}`;
-      const abstract = $blog.find('p.post-abstract').text() || 'No abstract available.';
-      const author = $blog.find('.post-meta').last().text();
-      blogData.push({ date, title, complete_link_path, abstract, author });
-    });
-
-    // Generate blog items and append to the DOM
-    $.each(blogData.slice(1), function (i, blog) {
-      const blog_item = `
+    $('.blogs').innerHTML += $$('ul.post-list > li', html).map(blog => {
+      const _$ = query => $(query, blog);
+      const authors = $$('.post-meta', blog);
+      return `
         <div class="blog">
           <div class="blog-content">
-            <p class="blog-date">${blog.date}</p>
-            <a href="${blog.complete_link_path}" target="_blank">
-              <h3 class="blog-title">${blog.title}</h3>
+            <p class="blog-date">${_$('.post-meta').innerText}</p>
+            <a href="${new URL(_$('h3.post-h3 > a').href, blogsUrl).href}" target="_blank">
+              <h3 class="blog-title">${_$('h3.post-h3 > a').innerText}</h3>
             </a>
-            <p class="blog-abstract">${blog.abstract}</p>
-            <p class="blog-author">by ${blog.author}</p>
+            <p class="blog-abstract">${_$('p.post-abstract').innerText || 'No abstract available.'}</p>
+            <p class="blog-author">by ${authors[authors.length-1].innerText}</p>
           </div>
-        </div>`;
-      $('.blogs').append(blog_item);
-    });
-  }).fail(function () {
-    console.log('Error fetching blogs webpage.');
-  });
+        </div>`
+      }).join('');
+    },
+    () => console.log('Error fetching blogs webpage.')
+  );
 });
 
 
 
 
 // NEWS SECTION --------------------
-$(function () {
-  $.getJSON('data/news.json', function (data) {
+/*
+afterLoading(() => {
+  getJSON('data/news.json', data => {
     console.log('success');
-    $.each(data.news, function (i, news_item) {
-      let article = `<div class="article">
-            <div class="article-date">${news_item.date}</div>
-            <div class="article-content">${news_item.content}</div>
-            <a href="${news_item.link}" class="article-btn">Know More</a>
-          </div>`
-      $('.articles').append(article);
-    });
-  }).error(function () {
-    console.log('error');
-  });
+    $('.articles').innerHTML += data.news.map(news_item =>
+      `<div class="article">
+        <div class="article-date">${news_item.date}</div>
+        <div class="article-content">${news_item.content}</div>
+        <a href="${news_item.link}" class="article-btn">Know More</a>
+      </div>`
+    ).join('');
+  },
+  err => console.warn(`${err}
+    """
+    This error is being shown probably because '.articles' is commented out
+    if you don't need it anymore consider removing this part of the code!
+    """`))
 });
-
-// SMOOTH SCROLLING --------------------
-// let scrollLink = $('.scroll');
-// scrollLink.click(function (e) {
-//   e.preventDefault();
-//   $('body,html').animate({
-//     scrollTop: $(this.hash).offset().top - $('nav').height() - 20
-//   }, 1000);
-// });
+*/
 
 // PARALLAX --------------------
-let nav = elem('nav')
-let introHeight = elem('.section--intro').offsetHeight
-let aboutOffset = $('#about').offset().top - ($(window).height() / 1.2)
-let teamOffset = $('#team').offset().top - ($(window).height() / 1.5)
-let projectsOffset = elem('#projects').offsetTop - ($(window).height() / 1.6)
-let footerOffset = elem('footer').offsetTop //- ($(window).height() / 1)
+let nav = $('nav')
+let introHeight = $('.section--intro').offsetHeight
+let aboutOffset = $id('about').offsetTop - (window.innerHeight / 1.2)
+let teamOffset = $id('team').offsetTop - (window.innerHeight / 1.5)
+let projectsOffset = $id('projects').offsetTop - (window.innerHeight / 1.6)
+let footerOffset = $('footer').offsetTop //- ($(window).height() / 1)
 
-$(window).scroll(function () {
-  let wScroll = $(window).scrollTop()
-
-  // NAVIGATION
-  if (wScroll > introHeight) {
-    nav.classList.add('alone')
-    // $('#niser-logo').attr("src", "images/n_logo_color.png")
-  }
-  if (wScroll < introHeight) {
-    nav.classList.remove('alone')
-    // $('#niser-logo').attr("src", "images/n_logo.png")
-  }
-
-  // LANDING ELEMENTS
-  if (wScroll > projectsOffset) { $('#projects .section__title').addClass('is-showing'); }
-  if (wScroll > teamOffset) { $('#team .section__title').addClass('is-showing'); }
-
-  if (wScroll > aboutOffset * 1.2) { elem('#about .section__title').classList.add('is-showing'); }
-  if (wScroll > aboutOffset) { elem('#about .section__image').classList.add('is-showing'); }
-  // if (wScroll > footerOffset) {
-  //   elem('footer .logo').classList.add('is-showing');
-  //   // console.log('shownmf')
-  // }
-  // console.log(wScroll, footerOffset)
-
+window.addEventListener('scroll', () => {
+  const wScroll = window.scrollY
+  nav.classList.toggle('alone', wScroll > introHeight);
+  [ // LANDING ELEMENTS
+    [projectsOffset,    '#projects .section__title'],
+    [teamOffset,        '#team .section__title'],
+    [aboutOffset * 1.2, '#about .section__title'],
+    [aboutOffset,       '#about .section__image']
+  ].forEach(([offset, query]) => { if (wScroll > offset) $(query).classList.add('is-showing'); });
+  // use $(query).classList.toggle('is-showing', wScroll > offset); if you want to get the effects if scrolled from the top again
 })
-
-// CAROUSEL --------------------
-const left = document.getElementById('js-left')
-const right = document.getElementById('js-right')
 
 // ONLOAD ANIMATION --------------------
-window.onload = function () {
+function typingAnimation(txt, containerId, speed = 100) {
+  let i = 0;
+  const typing = setInterval(() => {
+    if (i >= txt.length) return clearInterval(typing);
+    let char = txt[i++];
+    $id(containerId).innerHTML += char === ' ' ? '<br/>' : char;
+  }, speed)
+}
+window.onload = () => {
   checkNav()
-
-  typingAnimation('CODING CLUB', 100, "typing")
-  typingAnimation('NISER', 100, "typing-2")
-
+  typingAnimation('CODING CLUB', "typing")
+  typingAnimation('NISER', "typing-2")
 }
 
-function typingAnimation(txt, speed, container) {
-  var i = 0;
-
-  function typeWriter() {
-    if (i < txt.length) {
-      let char = txt.charAt(i)
-      if (char == ' ') {
-        char = '<br/>'
-      }
-      document.getElementById(container).innerHTML += char;
-      i++;
-      setTimeout(typeWriter, speed);
-    }
-  }
-
-  typeWriter()
-}
 
 // TEAM SECTION SWITCH FUNCTIONALITY --------------------
-$('.team-switch-current').click(function () {
-  $('.team-alumni').fadeOut()
-  $('.team-current').fadeIn()
-  $('.team-switch-current').addClass('active')
-  $('.team-switch-alumni').removeClass('active')
-})
-$('.team-switch-alumni').click(function () {
-  $('.team-current').fadeOut()
-  $('.team-alumni').fadeIn()
-  $('.team-switch-current').removeClass('active')
-  $('.team-switch-alumni').addClass('active')
-})
+async function switchTeam(prevteam, newTeam) {
+  await fadeOut($(`.team-${prevteam}`))
+  await fadeIn($(`.team-${newTeam}`), 400, "flex")
+  $(`.team-switch-${newTeam}`).classList.add('active')
+  $(`.team-switch-${prevteam}`).classList.remove('active')
+}
+$('.team-switch-current').onclick = () => switchTeam("alumni", "current");
+$('.team-switch-alumni').onclick = () => switchTeam("current", "alumni")
 
 // MOBILE NAVIGATION BAR --------------------
-$('#nav-close').click(function () {
-  $('.logo-2').hide()
-  $('nav ul').hide()
-  $('#nav-close').hide()
-  $('nav').addClass('small')
-  $('nav').removeClass('small-open')
-})
-
-$('#nav-open').click(function () {
-  $('nav').removeClass('small')
-  $('nav').addClass('small-open')
-  $('.logo-2').fadeIn()
-  $('nav ul').fadeIn()
-  $('#nav-close').fadeIn()
-  $('#nav-close').attr('style', 'display:block')
-})
-
-$('nav ul li').click(function () {
-  if ($('nav').hasClass('small-open')) {
-    $('.logo-2').hide()
-    $('nav ul').fadeOut()
-    $('#nav-close').hide()
-    $('nav').addClass('small')
-    $('nav').removeClass('small-open')
-  }
-})
-
-$(window).resize(checkNav())
-
-function checkNav() {
-  if ($(window).width() > 700) {
-    $('nav').removeClass('small')
-  }
-  else {
-    $('nav').addClass('small')
-  }
+$id('nav-close').onclick = () => {
+  Promise.all([ $('.logo-2'), $('nav ul'), $id('nav-close') ].map(fadeOut))
+  .then(() => switchClass(nav, 'small-open', 'small'));
 }
+
+$id('nav-open').onclick = () => {
+  switchClass(nav, 'small', 'small-open');
+  Promise.all([ fadeIn($('.logo-2')), fadeIn($('nav ul'), 400, 'flex'), fadeIn($id('nav-close'), 400, 'inline') ]);
+}
+
+$('nav ul li').onclick = () => {
+  if (!nav.classList.includes('small-open')) return;
+  [$('.logo-2'), $id('nav-close')].forEach(hide)
+  switchClass(nav, 'small-open', 'small')
+  await fadeOut($('nav ul'))
+};
+
+window.onresize = checkNav;
+function checkNav() { nav.classList.toggle('small', window.innerWidth <= 700) }
