@@ -38,7 +38,7 @@
         },
         {
             "name": "Time Table Generator",
-            "website": "http://10.1.32.21/timetable/",
+            "website": "https://sdgniser.github.io/timetable/",
             "source": "https://github.com/sdgniser/timetable",
             "image": "images/Timetable.jpg"
         },
