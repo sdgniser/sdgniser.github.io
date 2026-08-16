@@ -7,9 +7,9 @@
             "image": "images/arc.jpg"
         },
         {
-            "name": "NISER Canteen Menu",
-            "website": "https://www.niser.ac.in/hostels/canteenmenu/",
-            "source": "https://github.com/smlab-niser/niser-canteen-menu",
+            "name": "NISER Mess Menu",
+            "website": "https://sdgniser.github.io/messmenu/",
+            "source": "https://github.com/sdgniser/messmenu",
             "image": "images/canteen.jpg"
         },
         {
