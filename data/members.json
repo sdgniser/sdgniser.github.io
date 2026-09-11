@@ -99,8 +99,16 @@
             "github": "https://github.com/Marcus-tee",
             "website": "",
             "linkedin": "https://www.linkedin.com/in/piyush-sharma-44421b3a6"
+        },
+        {
+            "name": "Adrish Pati",
+            "desc": "Embracing the chaos..",
+            "image": "adrishp.jpg",
+            "email": "adrish.pati@niser.ac.in",
+            "github": "https://github.com/adrishp-06",
+            "website": "",
+            "linkedin": "https://www.linkedin.com/in/adrish-pati-0b59a83a5/"
         }
-
         
     ],
     "older_members": [
@@ -211,15 +219,6 @@
             "github": "https://github.com/Alpha3125",
             "website": "",
             "linkedin": ""
-        },
-        {
-            "name": "Adrish Pati",
-            "desc": "Embracing the chaos..",
-            "image": "adrishp.jpg",
-            "email": "adrish.pati@niser.ac.in",
-            "github": "https://github.com/adrishp-06",
-            "website": "",
-            "linkedin": "https://www.linkedin.com/in/adrish-pati-0b59a83a5/",
         }
     ]
 }
